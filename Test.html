@@ -1,0 +1,58 @@
+<body onload="animate_string('target')">
+
+<!--Find if 1st January is Sunday -->
+<p id="January">Find when 1st January is on Sunday:</p>
+<div id="1_January">
+</div>
+
+<div id="result"></div>
+</body>
+
+<script>
+    // Find if January is Sunday
+    function writeJanuary() {
+        for (var year1 = 2014; year1 <= 2050; year1++) {
+            var d = new Date(year1, 0, 1);
+            if (d.getDay() === 0) {
+                //document.getElementById('1_January').innerHTML = ("1st January is being a Sunday "+ year);
+                //document.write ("1st January is being a Sunday "+ year + "</br>");
+                //console.log("1st January is being a Sunday "+ year);
+                //let January = document.createElement('li');
+                //January.innerHTML = ("1st January is being a Sunday" + year1);
+                //January.appendChild(newLi);
+                //document.querySelectors('1_January').innerHTML = ("1st January is being a Sunday" + year1")
+                print_Jan('In the year ' + year1 + ' 1st is on Sunday');
+            }
+        }
+
+
+        function print_Jan(s) {
+            var r = document.getElementById('1_January');
+            r.innerHTML += s + '<br>';
+        }
+    }
+        writeJanuary();
+
+  /*  function fizzBuzz(){
+        for(var i=1;i<=100;i++){
+            if(i%5 === 0 && i%3 === 0){
+                print('FizzBuzz');
+            } else if(i%3 === 0){
+                print('Fizz');
+            } else if(i%5 === 0){
+                print('Buzz');
+            } else {
+                print(i);
+            }
+        }
+    }
+
+    var r = document.getElementById('result');
+
+    function print(s){
+        r.innerHTML += s + '<br>';
+    }
+
+    fizzBuzz();*/
+
+</script>

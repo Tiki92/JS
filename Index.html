@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<link rel="stylesheet" href="main.css">
+<title>JavaScript Exercises</title>
+</head>
+<body onload="animate_string('target')">
+
+<!-- Animate String -->
+<div>
+<p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
+</div>
+
+<!--Print Current Page-->
+    <div id ="pint_Page">
+        <p></p>
+<p>Click the button to print the current page.</p>
+<button onclick="print_current_page()">Print this page</button>
+    </div>
+
+<!--Show weekday adn current time -->
+<div id = "get_Date">
+    <p id = "Weekday"></p>
+    <p id = "hour"></p>
+</div>
+
+<!--Get Current Date -->
+<div id="get_current_date">
+  <p id="current_date"></p>
+</div>
+
+<!--Triangle Perimetre-->
+<div id="triangle_area">
+  <p class="context"> Triangle sides: 5, 6, 7.</p>
+  <p id="triangle"></p>
+</div>
+
+<!-- Find the leap year -->
+<div id="leap_Year">
+  <p id="year"></p>
+  <p id="leap"></p>
+</div>
+
+<!--Find if 1st January is Sunday -->
+<p id="January">Find when 1st January is on Sunday:</p>
+<div id="1_January">
+</div>
+
+<!-- Gues the number -->
+<div id="Guess_number">
+  <p id="number_G">Match Number: </p>
+</div>
+
+<!-- Days Untill Christmas -->
+<div id="Christmas">
+  <p>How many days are untill Christmas?</p>
+  <p id="days_until_xmas"></p>
+</div>
+
+<!--Calculate Multiplication and Division -->
+<div id="Calculator_div">
+  <form class="Calculator" action="index.html" method="post">
+    1st Number : <input type="text" id="firstNumber" /><br>
+    2nd Number: <input type="text" id="secondNumber" /><br>
+    <input type="button" onclick="multiplyBy()" value="Multiply" />
+    <input type="button" onclick="divideBy()" value="Divide" />
+  </form>
+  <p>The Result is : <br>
+  <span id="result"></span>
+  </p>
+</div>
+
+<!--Convert temperatures to and from Celsius, fahrenheit -->
+<div id="fah_To_celsius">
+  <p>Converting temperatures to and from Celsius, Fahrenheit:</p>
+  <p id="temperature1"></p>
+  <p id="temperature2"></p>
+</div>
+
+<!-- Get the Website URL -->
+<div id="Web_URL">
+  <p id="get_URL"></p>
+</div>
+
+<!-- Create a variable using a user-defined name -->
+<div id="create_user_defined">
+  <p id="user_defined"></p>
+</div>
+
+<!-- Get the extension of a filename -->
+<div id="extension_filename">
+  <p id="filename1"></p>
+</div>
+
+<!-- Get the diffrence between a given number -->
+<div id="diffrence_between">
+  <p id="dif_btw_number"></p>
+</div>
+
+<!-- Compute the sum of the two given integers -->
+<div id="Compute_integers">
+  <form class="compute_int" action="index.html" method="post">
+    Input the value of X : <input type="number" id="cmp_1"><br>
+    Input the value of Y : <input type="number" id="cmp_2">
+  </form>
+  <button type="button" name="button" onclick="sumTriple()"> Get Result</button>
+  <p id="the_sum"></p>
+</div>
+
+<!--Get the absolute diffrence between a specific number and 19 -->
+<div id="diff_19">
+  <p>Get the absolute diffrence between a specific number and 19 : </p>
+  <form class="get_diff_19" action="index.html" method="post">
+  Number : <input type="number" id="get_integer"><br>
+  </form>
+  <p></p>
+  <button type="button" onclick="diff_num()" name="button">Get Result</button>
+   <p id="19"></p>
+</div>
+
+<!-- Check two given numbers and return true if one of the numbers is 50 or is  their sum is 50 -->
+<div id="if_50">
+  <p>Check two given numbers :</p>
+  <form class="50_form">
+  Number : <input type="number" id="fst_num"><br>
+  Number2:<input type="number" id="scd_num">
+</form>
+<p></p>
+<button type="button" name="button" onclick="diff_50()">Get Result</button>
+<p id="50_this"></p>
+</div>
+    <script src= "Functions.js"> </script>
+</body>
+</html>
