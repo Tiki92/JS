@@ -1,0 +1,6 @@
+.DS_Store
+*.xcuserstate
+.gitignor
+.idea/vcs.xml 
+.idea/workspace.xml
+

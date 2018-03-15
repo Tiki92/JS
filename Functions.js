@@ -87,12 +87,13 @@ textNode.data = text;
 //animate_string();
 
 // Find the leap year
-var year = prompt("Input a Year : ");
+function findLeapYear() {
+var year = +document.getElementById('get_leapYear').value;
 var x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 document.getElementById('leap').innerHTML = x;
 document.getElementById('year').innerHTML =
 "Is the year " + year + " a leap year?";
-
+}
 // Find if January is Sunday
 function writeJanuary() {
     for (var year1 = 2014; year1 <= 2050; year1++) {
@@ -120,7 +121,7 @@ function writeJanuary() {
 // Guess the number
     function guessNumber() {
         var num = Math.ceil(Math.random() * 10);
-        var gnum = prompt('Guess the number between 1 and 10 inclusive');
+        var gnum = +document.getElementById('numberGuess').value;
         if (gnum === num) {
             document.getElementById('number_G').innerHTML =
                 "Did you match the number? :" + "Number Matched.";
@@ -129,8 +130,6 @@ function writeJanuary() {
                 "Did you match the number? :" + " No, the number was " + num + ".";
         }
     }
-
-    guessNumber();
 
 //Days Untill Xmas
     function getXmas() {
@@ -212,7 +211,7 @@ function writeJanuary() {
 
 // Get the difference between a given number
     function diffrence() {
-        var n = window.prompt("Input a Number : ");
+        var n = +document.getElementById('different_number').value;
         if (n <= 13) {
             document.getElementById('dif_btw_number').innerHTML =
                 "The difference is : " + (13 - n);
@@ -222,14 +221,12 @@ function writeJanuary() {
         }
     }
 
-    diffrence();
-
 // Compute the sum of the two given integers
 
     function sumTriple() {
         var x = +document.getElementById('cmp_1').value;
         var y = +document.getElementById('cmp_2').value;
-        console.log(y);
+        //console.log(y);
         if (x === y) {
 //return 3 * (x + y);
             document.getElementById('the_sum').innerHTML = "The triple of the sum of two numbers is : " + (3 * (x + y));
@@ -258,4 +255,14 @@ function diff_50() {
  } else {
    document.getElementById('50_this').innerHTML = 'The numbers are not 50';
  }
+}
+
+//Check a given integer is within 20 of 100 or 400
+function testhundred() {
+  var num1 = +document.getElementById('x').value;
+  if (Math.abs(100 - num1) <= 20 || (Math.abs(400 - x) <= 20)) {
+  document.getElementById('slow').innerHTML = 'The number is in the range';
+} else {
+  document.getElementById('slow').innerHTML = 'The number is out of range';
+}
 }

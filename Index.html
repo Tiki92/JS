@@ -15,7 +15,7 @@
 <!--Print Current Page-->
     <div id ="pint_Page">
         <p></p>
-<p>Click the button to print the current page.</p>
+<p>Click the button to print the current page:</p>
 <button onclick="print_current_page()">Print this page</button>
     </div>
 
@@ -38,6 +38,10 @@
 
 <!-- Find the leap year -->
 <div id="leap_Year">
+  <form class="fLYear" action="index.html" method="post">
+    Input a Year : <input type="number" id="get_leapYear">
+  </form>
+  <button type="button" name="button" onclick="findLeapYear()">Get Result</button>
   <p id="year"></p>
   <p id="leap"></p>
 </div>
@@ -49,7 +53,12 @@
 
 <!-- Gues the number -->
 <div id="Guess_number">
-  <p id="number_G">Match Number: </p>
+  <p></p>
+  <form class="Guess" action="index.html" method="post">
+    Guess the number between 1 and 10 inclusive : <input type="number" id="numberGuess"><br>
+  </form>
+  <button type="button" name="button" onclick="guessNumber()">Get Result</button>
+  <p id="number_G"> </p>
 </div>
 
 <!-- Days Untill Christmas -->
@@ -95,6 +104,11 @@
 
 <!-- Get the diffrence between a given number -->
 <div id="diffrence_between">
+  <p>Get the difference between a given number :</p>
+  <form class="get_diffrence_between_num" action="index.html" method="post">
+    Input a Number : <input type="number" id="different_number">
+  </form>
+  <button type="button" name="button" onclick="diffrence()">Get Result</button>
   <p id="dif_btw_number"></p>
 </div>
 
@@ -123,12 +137,21 @@
 <div id="if_50">
   <p>Check two given numbers :</p>
   <form class="50_form">
-  Number : <input type="number" id="fst_num"><br>
+  Number  : <input type="number" id="fst_num"><br>
   Number2:<input type="number" id="scd_num">
 </form>
 <p></p>
 <button type="button" name="button" onclick="diff_50()">Get Result</button>
 <p id="50_this"></p>
+</div>
+
+<!--Check a given integer is within 20 of 100 or 400 -->
+<div id="range_100">
+  <form class="range_400" action="index.html" method="post">
+    Enter a Number : <input id="x">
+  </form>
+  <button type="button" name="button" onclick="testhundred()">Get Result</button>
+  <p id="slow"></p>
 </div>
     <script src= "Functions.js"> </script>
 </body>
