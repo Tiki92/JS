@@ -91,8 +91,7 @@ function findLeapYear() {
 var year = +document.getElementById('get_leapYear').value;
 var x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 document.getElementById('leap').innerHTML = x;
-document.getElementById('year').innerHTML =
-"Is the year " + year + " a leap year?";
+document.getElementById('year').innerHTML = "Is the year " + year + " a leap year?";
 }
 // Find if January is Sunday
 function writeJanuary() {
@@ -155,13 +154,22 @@ function writeJanuary() {
 
     function divideBy() {
         var num1, num2;
-        num1 = document.getElementById('firstNumber').value;
-        num2 = document.getElementById('secondNumber').value;
+        num1 = +document.getElementById('firstNumber').value;
+        num2 = +document.getElementById('secondNumber').value;
         document.getElementById('result').innerHTML = num1 / num2;
     }
 
 // Convert fahrenheit to Celsius
-    function cToF(celsius) {
+    function convetTemp() {
+      var temp = +document.getElementById('num_temp').value;
+      console.log(temp);
+      //var covertFah =
+      document.getElementById('toFah').innerHTML = temp + "\xB0C is " + (temp * 9 / 5 + 32) + "\xB0F";
+      //var convertCel =
+      document.getElementById('toCel').innerHTML = temp + "\xB0F is " + ((temp - 32) * 5 / 9) + "\xB0C"
+    }
+
+  /*  function cToF(celsius) {
         var cTemp = celsius;
         var cToFahr = cTemp * 9 / 5 + 32;
         //var message = cTemp + "\xB0C is " + cToFahr + " \xB0F";
@@ -179,7 +187,7 @@ function writeJanuary() {
 
     cToF(60);
     fToC(45);
-
+*/
 // Get the Website URL
     document.getElementById('get_URL').innerHTML =
         "The Website's URL is : " + document.URL;
@@ -250,7 +258,7 @@ function diff_num() {
 function diff_50() {
  var x = +document.getElementById('fst_num').value;
  var y = +document.getElementById('scd_num').value;
- if ((x == 50 || y == 50) || (x + y == 50)) {
+ if ((x === 50 || y === 50) || (x + y === 50)) {
    document.getElementById('50_this').innerHTML = 'The numbers are 50';
  } else {
    document.getElementById('50_this').innerHTML = 'The numbers are not 50';
@@ -259,10 +267,23 @@ function diff_50() {
 
 //Check a given integer is within 20 of 100 or 400
 function testhundred() {
-  var num1 = +document.getElementById('x').value;
-  if (Math.abs(100 - num1) <= 20 || (Math.abs(400 - x) <= 20)) {
+  var num1 = +document.getElementById('cool').value;
+  console.log(num1);
+  if (Math.abs(100 - num1) <= 20 || (Math.abs(400 - num1) <= 20)) {
   document.getElementById('slow').innerHTML = 'The number is in the range';
 } else {
   document.getElementById('slow').innerHTML = 'The number is out of range';
+}
+}
+
+// Check two given integers, one is positive and the other is negative
+function positive_negative() {
+  var num_pos = +document.getElementById('pos_neg_num1').value;
+  var num_neg = +document.getElementById('pos_neg_num2').value;
+  if ((num_pos < 0 && num_neg > 0) || (num_pos > 0 && num_neg < 0)) {
+  document.getElementById('pos_neg_result').innerHTML = 'The Function returned True';
+}
+else {
+  document.getElementById('pos_neg_result').innerHTML = 'The Function returned False';
 }
 }

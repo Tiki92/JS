@@ -19,14 +19,16 @@
 <button onclick="print_current_page()">Print this page</button>
     </div>
 
-<!--Show weekday adn current time -->
+<!--Show weekday and current time -->
 <div id = "get_Date">
+  <p>Show weekday and current time :</p>
     <p id = "Weekday"></p>
     <p id = "hour"></p>
 </div>
 
 <!--Get Current Date -->
 <div id="get_current_date">
+  <p>Current Date :</p>
   <p id="current_date"></p>
 </div>
 
@@ -38,6 +40,7 @@
 
 <!-- Find the leap year -->
 <div id="leap_Year">
+  <p>Find the leap year</p>
   <form class="fLYear" action="index.html" method="post">
     Input a Year : <input type="number" id="get_leapYear">
   </form>
@@ -80,13 +83,23 @@
   </p>
 </div>
 
-<!--Convert temperatures to and from Celsius, fahrenheit -->
+<!-- Convert temperatures to and from Celsius, fahrenheit -->
+<div id="fah_To_celsius">
+  <p>Convert Temperature Celsius to Fahrenheit</p>
+  <form class="Converter" action="index.html" method="post">
+    Input Temperature : <input type="number" id="num_temp">
+  </form>
+  <button type="button" name="button" onclick="convetTemp()">Convert Temperature</button>
+  <p id="toFah"></p>
+  <p id="toCel"></p>
+</div>
+<!--
 <div id="fah_To_celsius">
   <p>Converting temperatures to and from Celsius, Fahrenheit:</p>
   <p id="temperature1"></p>
   <p id="temperature2"></p>
 </div>
-
+-->
 <!-- Get the Website URL -->
 <div id="Web_URL">
   <p id="get_URL"></p>
@@ -147,11 +160,23 @@
 
 <!--Check a given integer is within 20 of 100 or 400 -->
 <div id="range_100">
+  <p>Check a given integer is within 20 of 100 or 400 :</p>
   <form class="range_400" action="index.html" method="post">
-    Enter a Number : <input id="x">
+    Enter a Number : <input id="cool">
   </form>
   <button type="button" name="button" onclick="testhundred()">Get Result</button>
   <p id="slow"></p>
+</div>
+
+<!-- Check two given integers, one is positive and one is negative -->
+<div id="pos_neg">
+  <p>Check two given integers, one is positive and the other is negative :</p>
+  <form class="pos_neg_form" action="index.html" method="post">
+    Enter a Number1 : <input id="pos_neg_num1"><br>
+    Enter a Number2 : <input id="pos_neg_num2">
+  </form>
+  <button type="button" name="button" onclick="positive_negative()">Get Result</button>
+  <p id="pos_neg_result"></p>
 </div>
     <script src= "Functions.js"> </script>
 </body>
