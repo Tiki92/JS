@@ -191,12 +191,23 @@
 
 <!-- Remove a character at the specified position of a given string and return the new string -->
 <div id="remove_character_string">
+  <p>Remove a character at the specified position of a given string and return the new string</p>
   <form class="remove_letter" action="index.html" method="post">
     Input the Word : <input type="text" id="word_to_remove"> <br>
     Input the number of the letter to remove : <input type="text" id="number_letter">
   </form>
   <button type="button" name="button" onclick="remove_character()">Get Result</button>
   <p id="result_remove"></p>
+</div>
+
+<!-- Create a new string from a given string changing the position of first and last characters -->
+<div class="function1">
+  <p>Create a new string from a given string changing the position of first and last characters:</p>
+  <form class="form1" action="index.html" method="post">
+  Input a word : <input type="text" id="word_first_last">
+  </form>
+  <button type="button" name="button" onclick="first_last()">Get Result</button>
+  <p id="result_first_last"></p>
 </div>
     <script src= "Functions.js"> </script>
 </body>

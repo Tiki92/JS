@@ -307,3 +307,14 @@ function remove_character() {
   var part2 = word.substring(letter + 1, word.length);
   document.getElementById('result_remove').innerHTML = "the letter was removed : " + (part1 + part2);
 }
+
+// Create a new string from a given string changing the position of first and last characters
+function first_last() {
+  var str1 = document.getElementById('word_first_last').value;
+  var mid_char = str1.substring(1, str1.length - 1);
+  if (str1.length <= 1) {
+    document.getElementById('result_first_last').innerHTML = "The word " + '"' + str1 + '"' + " is to short";
+  } else {
+    document.getElementById('result_first_last').innerHTML = "The new Word is: " + (str1.charAt(str1.length - 1)) + mid_char + str1.charAt(0);
+  }
+}
