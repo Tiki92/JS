@@ -335,3 +335,40 @@ function test37() {
     document.getElementById('result_37').innerHTML = "The number is not a multiple of 3 or 7";
   }
 }
+
+// Create a new string from a given string taking the last 3 characters and added at both the front and back
+function front_back3() {
+  var fb3_word = document.getElementById('word_front_back3').value;
+  var back = fb3_word.substring(fb3_word.length - 3);
+
+  if (fb3_word.length >= 3) {
+  document.getElementById('result_fb3').innerHTML = "The new word is : " + back + fb3_word + back;
+} else {
+  document.getElementById('result_fb3').innerHTML = "The word " + '"' + fb3_word + '"' + " is to short.";
+}
+}
+
+// Check if a string starts with 'Java' and false otherwise
+function start_spec_str() {
+  var word = document.getElementById('word_start_spec_str').value;
+  var front = word.substring(0, 4);
+  if (word.length < 4) {
+    document.getElementById('result_start_spec_str').innerHTML = "The word " + '"' + word + '"' + "is to short";
+  }
+  if (front === 'Java') {
+    document.getElementById('result_start_spec_str').innerHTML = "The word begins whith Java";
+  } else {
+    document.getElementById('result_start_spec_str').innerHTML = "The word dosen't being whit Java";
+  }
+}
+
+// Check if two given integer values are in the range 50..99
+function check_numbers() {
+  var num1 = +document.getElementById('number1_check_numbers').value;
+  var num2 = +document.getElementById('number2_check_numbers').value;
+  if ((num1 >= 50 && num1 <= 99) || (num2 >= 10 && num2 <= 99)) {
+    document.getElementById('result_check_numbers').innerHTML = "The function returned True";
+  } else {
+    document.getElementById('result_check_numbers').innerHTML = "The function returned False";
+  }
+}
