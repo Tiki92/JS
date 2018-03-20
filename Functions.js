@@ -268,7 +268,7 @@ function diff_50() {
 //Check a given integer is within 20 of 100 or 400
 function testhundred() {
   var num1 = +document.getElementById('cool').value;
-  console.log(num1);
+  //console.log(num1);
   if (Math.abs(100 - num1) <= 20 || (Math.abs(400 - num1) <= 20)) {
   document.getElementById('slow').innerHTML = 'The number is in the range';
 } else {
@@ -286,4 +286,24 @@ function positive_negative() {
 else {
   document.getElementById('pos_neg_result').innerHTML = 'The Function returned False';
 }
+}
+
+// Create a new string adding "Py" in front of a given string
+function string_check () {
+  var strPy = document.getElementById('string_Py').value;
+  //console.log(strPy);
+  if (strPy === null || strPy === undefined || strPy.substring(0,2) === 'Py') {
+    document.getElementById('result_check').innerHTML = "The word  " + strPy + " has Py in front.";
+  } else {
+    document.getElementById('result_check').innerHTML = "Py was added to the string" + (" Py" + strPy) + ".";
+  }
+}
+
+// Remove a character at the specified position of a given string and return the new string
+function remove_character() {
+  var word = document.getElementById('word_to_remove').value;
+  var letter = +document.getElementById('number_letter').value;
+  var part1 = word.substring(0, letter);
+  var part2 = word.substring(letter + 1, word.length);
+  document.getElementById('result_remove').innerHTML = "the letter was removed : " + (part1 + part2);
 }

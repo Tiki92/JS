@@ -178,6 +178,26 @@
   <button type="button" name="button" onclick="positive_negative()">Get Result</button>
   <p id="pos_neg_result"></p>
 </div>
+
+<!-- Create a new string adding "Py" in front of a given string -->
+<div id="check_Py_string">
+  <p>Create a new string adding "Py" in front of a given string :</p>
+  <form class="get_string_Py" action="index.html" method="post">
+    Inout a Word : <input type="text" id="string_Py">
+  </form>
+  <button type="button" name="button" onclick="string_check()">Get Result</button>
+  <p id="result_check"></p>
+</div>
+
+<!-- Remove a character at the specified position of a given string and return the new string -->
+<div id="remove_character_string">
+  <form class="remove_letter" action="index.html" method="post">
+    Input the Word : <input type="text" id="word_to_remove"> <br>
+    Input the number of the letter to remove : <input type="text" id="number_letter">
+  </form>
+  <button type="button" name="button" onclick="remove_character()">Get Result</button>
+  <p id="result_remove"></p>
+</div>
     <script src= "Functions.js"> </script>
 </body>
 </html>
