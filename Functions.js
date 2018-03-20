@@ -372,3 +372,26 @@ function check_numbers() {
     document.getElementById('result_check_numbers').innerHTML = "The function returned False";
   }
 }
+
+// Check if three given integer values are in the range 50..99
+function check_three_nums() {
+  var num1 = +document.getElementById('num1_check_3').value;
+  var num2 = +document.getElementById('num2_check_3').value;
+  var num3 = +document.getElementById('num3_check_3').value;
+  if ((num1 >= 50 && num1 <= 99) || (num2 >= 50 && num2 <= 99) || (num3 >= 50 && num3 <= 99)) {
+    document.getElementById('result_check_three_nums').innerHTML = "One of the numbers is in the range.";
+  } else {
+    document.getElementById('result_check_three_nums').innerHTML = "The numbers are out of range.";
+  }
+}
+
+// Check if a string "Script" presents at 5th (index 4) position in a given string
+function check_script() {
+  var word = document.getElementById('word_check_script').value;
+  result_str = word.substring(0, 4) + word.substring(10, word.length);
+  if (word.substring(10, 4) === 'Script') {
+    document.getElementById('result_check_script').innerHTML = "The result is : " + result_str;
+  } else {
+    document.getElementById('result_check_script').innerHTML = "Script not matched : " + word;
+  }
+}
