@@ -318,3 +318,20 @@ function first_last() {
     document.getElementById('result_first_last').innerHTML = "The new Word is: " + (str1.charAt(str1.length - 1)) + mid_char + str1.charAt(0);
   }
 }
+
+// Create a new string from a given string with the first character of the given string added at the front and back
+function front_back() {
+  var fb_string = document.getElementById('word_front_back').value;
+  var first = fb_string.substring(0, 1);
+  document.getElementById('result_front_back').innerHTML = "The new Word is: " + first + fb_string + first;
+}
+
+// Check if a given positive number is a multiple of 3 or a multiple of 7
+function test37() {
+  var multi37 = +document.getElementById('number_37').value;
+  if (multi37 % 3 === 0 || multi37 % 7 === 0) {
+    document.getElementById('result_37').innerHTML = "The number is a multiple of 3 or 7";
+  } else {
+    document.getElementById('result_37').innerHTML = "The number is not a multiple of 3 or 7";
+  }
+}
