@@ -395,3 +395,36 @@ function check_script() {
     document.getElementById('result_check_script').innerHTML = "Script not matched : " + word;
   }
 }
+
+// Find the largest of three given integers
+function max_of_three() {
+  var num1 = +document.getElementById('num1_max_of_three').value;
+  var num2 = +document.getElementById('num2_max_of_three').value;
+  var num3 = +document.getElementById('num3_max_of_three').value;
+  // var max_value = 0;
+  if (num1 >= num2 && num1 >= num3) {
+    document.getElementById('result_max_of_three').innerHTML = "The largest number is : " + num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+    document.getElementById('result_max_of_three').innerHTML = "The largest number is : " + num2;
+  } else if (num3 >= num1 && num3 >= num2) {
+    document.getElementById('result_max_of_three').innerHTML = "The largest number is : " + num3;
+  }
+}
+
+// Find a value which is nearest to 100 from two different given integer values
+function near_100() {
+  var num1 = +document.getElementById('num1_near_100').value;
+  var num2 = +document.getElementById('num2_near_100').value;
+
+  if (num1 != num2) {
+  var x1 = Math.abs(num1 - 100);
+  var y1 = Math.abs(num2 - 100);
+  if (x1 < y1) {
+    document.getElementById('result_near_100').innerHTML = "Number : " + num1 + " is closer to 100";
+  } else {
+    document.getElementById('result_near_100').innerHTML = "Number : " + num2 + " is closer to 100";
+  }
+} else {
+  document.getElementById('result_near_100').innerHTML = "Numbers are equal";
+}
+}
