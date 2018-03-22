@@ -425,6 +425,35 @@ function near_100() {
     document.getElementById('result_near_100').innerHTML = "Number : " + num2 + " is closer to 100";
   }
 } else {
-  document.getElementById('result_near_100').innerHTML = "Numbers are equal";
+  document.getElementById('result_near_100').innerHTML = "Numbers are equal.";
 }
+}
+
+// Check if two numbers are in range 40..60 or in the range 70..100 inclusive
+function numbers_ranges() {
+  var num1 = +document.getElementById('num1_numbers_ranges').value;
+  var num2 = +document.getElementById('num2_numbers_ranges').value;
+  //console.log(num1);
+  if ((num1 >= 40 && num1 <= 60 && num2 >= 40 && num2 <= 60) || (num1 >= 70 && num1 <= 100 && num2 >= 70 && num2 <= 100)) {
+    document.getElementById('result_numbers_ranges').innerHTML = "The numbers are in the range.";
+  } else {
+    document.getElementById('result_numbers_ranges').innerHTML = "The numbers are not in the range."
+  }
+}
+
+// Find the larger number from the two given positive integers
+function max_townums_range() {
+  var num1 = +document.getElementById('num1_max_townums_range').value;
+  var num2 = +document.getElementById('num2_max_townums_range').value;
+  //console.log(num1);
+  if (num1 >= 40 && num2 <= 60) {
+    if (num1 > num2) {
+      document.getElementById('result_max_townums_range').innerHTML = "The largest number is : " + num1 + ".";
+    } else {
+      document.getElementById('result_max_townums_range').innerHTML = "The largest number is : " + num2 + ".";
+    }
+  }
+  if (num1 < 40 || num2 > 60) {
+    document.getElementById('result_max_townums_range').innerHTML = "One or both numbers are out of range.";
+  }
 }
