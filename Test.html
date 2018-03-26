@@ -1,16 +1,61 @@
-<body onload="animate_string('target')">
+<body>
+  <div class="function1">
+    <form class="form1" action="index.html" method="post">
+      Enter Number1 : <input type="number" id="num1_global"><br>
+      Enter Number2 : <input type="number" id="num2_global"><br>
+      Enter Number3 : <input type="number" id="num3_global"><br>
+      Enter Number4 : <input type="number" id="num4_global">
+    </form>
+    <button type="button" name="button" onclick="first_last_1()">Get Result</button>
+    <p id="result_first_last_1"></p>
+  </div>
+
+
+
+<!--
+<div class="function1">
+    <form class="form1" action="index.html" method="post">
+      Number1 : <input type="number" id="num1_check_numbers"><br>
+    </form>
+    <button type="button" name="button" onclick="check_numbers()">Get Result</button>
+    <p id="result_check_numbers"></p>
+  </div> ->>
 
 <!--Find if 1st January is Sunday -->
-<p id="January">Find when 1st January is on Sunday:</p>
+<!--<p id="January">Find when 1st January is on Sunday:</p>
 <div id="1_January">
 </div>
 
-<div id="result"></div>
+<div id="result"></div> -->
 </body>
 
 <script>
+var num1 = +document.getElementById('num1_global').value;
+var num2 = +document.getElementById('num2_global').value;
+var num3 = +document.getElementById('num3_global').value;
+var num4 = +document.getElementById('num4_global').value;
+
+
+function first_last_1() {
+var nums = [num1, num2, num3, num4];
+  document.getElementById('result_first_last_1').innerHTML = "The result is : " + [nums[1], nums[2], nums[0]];
+}
+
+
+
+/*
+function check_numbers() {
+  var x = +document.getElementById('num1_check_numbers').value;
+  console.log(x);
+  if ((x % 7) === 0 || (x % 11) === 0 && (x % 7) === (x % 11)) {
+    document.getElementById('result_check_numbers').innerHTML = "One of the numbers is a multiple of 11 or 7.";
+
+  } else {
+    document.getElementById('result_check_numbers').innerHTML = "The numbers are not multiple of 11 or 7.";
+  }
+  */
     // Find if January is Sunday
-    function writeJanuary() {
+    /*function writeJanuary() {
         for (var year1 = 2014; year1 <= 2050; year1++) {
             var d = new Date(year1, 0, 1);
             if (d.getDay() === 0) {
@@ -66,5 +111,5 @@
     } else {
       document.getElementById('pos_neg_result').innerHTML = 'The Function returned False';
     }
-    }
+  } */
 </script>

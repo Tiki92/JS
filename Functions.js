@@ -1,6 +1,4 @@
-/*global
-alert, confirm, console, Debug, opera, prompt, WSH, window, document, setInterval;
-*/
+
 
 // Print Page Function
 function print_current_page() {
@@ -455,5 +453,467 @@ function max_townums_range() {
   }
   if (num1 < 40 || num2 > 60) {
     document.getElementById('result_max_townums_range').innerHTML = "One or both numbers are out of range.";
+  }
+}
+
+// Check a given string contains 2 to 4 numbers of a specified character
+function check_char() {
+  var word = document.getElementById('word_check_char').value;
+  var letter = document.getElementById('char_check_char').value;
+  var ctr = 0;
+  for (var i = 0; i < word.length; i++) {
+    if (word.charAt(i) === letter) {
+        ctr++;
+    }
+  }
+  document.getElementById('result_check_char').innerHTML = "There are/is : " + ctr + " letters of" + ' "' + letter + '"' + " in the word " + '"' + word + '"' + ".";
+}
+
+// Check if the last digit of the three given positive integers is same
+function last_digit() {
+  var num1 = +document.getElementById('num1_last_digit').value;
+  var num2 = +document.getElementById('num2_last_digit').value;
+  var num3 = +document.getElementById('num3_last_digit').value;
+  if ((num1 > 0) && num2 > 0 && num3 > 0 && num1 % 10 === num2 % 10 && num2 % 10 === num3 % 10 && num1 % 10 === num3 % 10) {
+
+  //if (num1 % 10 == num2 % 10 && num2 % 10 == num3 % 10 && num1 % num3 % 10) {
+  document.getElementById('result_last_digit').innerHTML = "Ther numbers have the last digit the same";
+//  }
+} else {
+  document.getElementById('result_last_digit').innerHTML = "The numbers are not all positive";
+}
+}
+
+// Create new string with first 3 characters are in lower case
+function upper_lower() {
+  var word = document.getElementById('word_upper_lower').value;
+  if (word.length < 3) {
+    document.getElementById('result_upper_lower').innerHTML = "The word is to short : " + (word.toUpperCase());
+  } else {
+    var front_part = (word.substring(0, 3)).toLowerCase();
+    var back_part  = word.substring(3, word.length);
+    document.getElementById('result_upper_lower').innerHTML = "The result is : " + front_part + back_part;
+  }
+}
+
+// Check the total marks of a student in various examinations
+function exam_status() {
+  var totalmarks = +document.getElementById('totalmarks_exam_status').value;
+  var exam = +document.getElementById('exammk_exam_status').value;
+  var result = (totalmarks + exam) / 2;
+  //console.log(result);
+  if (result >= 1 && result <= 100) {
+    if(result < 90) {
+    document.getElementById('result_exam_status').innerHTML = "You Failed";
+  }  else  {
+    document.getElementById('result_exam_status').innerHTML = "You Passed";
+  }
+}
+  if(result > 100) {
+    document.getElementById('result_exam_status').innerHTML = "The marks are unreal";
+  }
+}
+
+// Compute the sum of the two given integer
+function sortasum() {
+  var num1 = +document.getElementById('num1_sortasum').value;
+  var num2 = +document.getElementById('num2_sortasum').value;
+  const sum_nums = num1 + num2;
+  if (sum_nums >= 50 && sum_nums <= 80) {
+    document.getElementById('result_sortasum').innerHTML = "The result is : " + 65;
+  } else {
+    document.getElementById('result_sortasum').innerHTML = "The result is : " + 80;
+  }
+}
+
+// Check from two given numbers if either one is 8 or their sum or diffrence is 8
+function check8() {
+  var num1 = +document.getElementById('num1_check8').value;
+  var num2 = +document.getElementById('num2_check8').value;
+  if (num1 === 8 || num2 === 8) {
+    document.getElementById('result_check8').innerHTML = "One of the numbers is Equal to 8.";
+  }
+  if (num1 + num2 === 8 || Math.abs(num1 - num2) === 8) {
+    document.getElementById('result_check8').innerHTML = "The sum or the difference between the numbers is equal to 8.";
+  } else {
+    document.getElementById('result_check8').innerHTML = "The numbers are out of range.";
+  }
+}
+
+// Check three given numbers, if the three nunbers are same return 30 otherwise return 20 if two numbers are same return 40
+function three_numbers() {
+  var num1 = +document.getElementById('num1_three_numbers').value;
+  var num2 = +document.getElementById('num2_three_numbers').value;
+  var num3 = +document.getElementById('num3_three_numbers').value;
+  //console.log(num1);
+  //console.log(num2);
+  //console.log(num3);
+  if (num1 == num2 || num2 == num3 || num3 == num1) {
+    document.getElementById('result_three_numbers').innerHTML = "40";
+
+  if (num1 == num2 && num2 == num3) {
+    document.getElementById('result_three_numbers').innerHTML = "30";
+  }
+}
+  else {
+    document.getElementById('result_three_numbers').innerHTML = "20";
+  }
+}
+
+// Check if three given numbers are increasing in strict mode or in soft mode
+function number_order() {
+  var num1 = +document.getElementById('num1_number_order').value;
+  var num2 = +document.getElementById('num2_number_order').value;
+  var num3 = +document.getElementById('num3_number_order').value;
+   if (num3 > num2) {
+    document.getElementById('result_number_order').innerHTML = "Soft Mode.";
+    if (num2 > num1 && num3 > num2) {
+      document.getElementById('result_number_order').innerHTML = "Strict Mode.";
+    }
+  }else {
+    document.getElementById('result_number_order').innerHTML = "Undefined.";
+  }
+}
+
+// Check from three given numbers that two or all of them have the same rightmost digit
+function same_last_digit() {
+  var num1 = +document.getElementById('num1_same_last_digit').value;
+  var num2 = +document.getElementById('num2_same_last_digit').value;
+  var num3 = +document.getElementById('num3_same_last_digit').value;
+  if ((num1 % 10 === num2 % 10) || (num1 % 10 === num3 % 10) || (num2 % 10 === num3 % 10)) {
+    document.getElementById('result_same_last_digit').innerHTML = "All the numbers have the same last digit.";
+  } else {
+    document.getElementById('result_same_last_digit').innerHTML = "The numbers do not have the same last digit.";
+  }
+}
+
+// Check from three given integers that if a number is greater than or equal to 20 and less than one of the others
+function lessby20_others() {
+  var x = +document.getElementById('num1_lessby20_others').value;
+  var y = +document.getElementById('num2_lessby20_others').value;
+  var z = +document.getElementById('num3_lessby20_others').value;
+  if (x >= 20 && (x < y || x < z) || (y >= 20 && (y < x || y < z)) || (z >= 20 && (z < y || z < x))) {
+    document.getElementById('result_lessby20_others').innerHTML = "The numbers are less or equal to 20 and not greater than the others.";
+  } else {
+    document.getElementById('result_lessby20_others').innerHTML = "The numbers are not in the range.";
+  }
+}
+
+// Check two given integer values and return true if one of the number is 15 or if their sum or difference is 15
+function test_number() {
+  var x = +document.getElementById('num1_test_number').value;
+  var y = +document.getElementById('num2_test_number').value;
+  if (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15) {
+    document.getElementById('result_test_number').innerHTML = "One of the numbers is equal to 15 or their sum or diffrence is equal to 15.";
+  } else {
+    document.getElementById('result_test_number').innerHTML = "No number is equal to 15 or their sum or difference is equal to 15."
+  }
+}
+
+// Check two given non-negative integers and if one of the number is multiple of 7 or 11
+function check_numbers() {
+  var x = +document.getElementById('num1_check_numbers').value;
+  console.log(x);
+  if ((x % 7) === 0 || (x % 11) === 0 /*&& (x % 7) !== (x % 11)*/) {
+    document.getElementById('result_check_numbers1').innerHTML = "One of the numbers is a multiple of 11 or 7.";
+
+  } else {
+    document.getElementById('result_check_numbers1').innerHTML = "The numbers are not multiple of 11 or 7.";
+  }
+}
+
+// Check if a number in the range 40..10000 presents in two number
+function test_digit() {
+  var x = +document.getElementById('num1_test_digit').value;
+  var y = +document.getElementById('num2_test_digit').value;
+  let x_div = parseInt(x / 40),
+      x_mod = x % 40,
+      y_div = parseInt(y / 40),
+      y_mod = y % 40;
+  if (x_div === y_div || x_mod === y_mod || x_div === y_mod || x_mod === y_div) {
+    document.getElementById('result_test_digit').innerHTML = "The number presents in two numbers in the range.";
+  }else {
+    document.getElementById('result_test_digit').innerHTML = "The number does not presents in the range.";
+  }
+}
+
+// Reverse a given string
+function string_reverse() {
+  var word = document.getElementById('word_string.reverse').value;
+  document.getElementById('result_string_reverse').innerHTML = "The reverse word is : " + word.split("").reverse().join("");
+}
+
+// Replace every character in a given string with the character following it in the alphabet
+function LetterChanges() {
+  var word = document.getElementById('word_LetterChanges').value;
+  var s = word.split('');
+  for (var i = 0; i < word.length; i++) {
+
+    // Cesar cipher
+    switch (s[i]) {
+      case ' ':
+      break;
+      case 'z':
+      s[i] = 'a';
+      break;
+      case 'Z':
+      s[i] = 'A';
+        break;
+      default:
+      s[i] = String.fromCharCode(1 + s[i].charCodeAt(0))
+        }
+        //Upper-case vowels
+        switch (s[i]) {
+          case 'a': case 'e': case 'i': case 'o': case 'u':
+          s[i] = s[i].toUpperCase();
+        }
+  }
+  document.getElementById('result_LetterChanges').innerHTML = s.join('');
+}
+
+// Capitalize the first letter of each word of a given string
+function capital_letter() {
+  var sentace = document.getElementById('sentance_capital_letter').value;
+  var str = sentace.split(" ");
+  for (var i = 0, x = str.length; i < x; i++) {
+    str[i] = str[i]
+    [0].toUpperCase() + str[i].substring(1);
+  }
+  document.getElementById('result_capital_letter').innerHTML = str.join(" ");
+}
+
+// Convert a given number to hours and minutes
+function time_converter() {
+  var num1 = +document.getElementById('num1_time_converter').value;
+  var hours = Math.floor(num1 / 60);
+  var minutes = num1 % 60;
+  //console.log(hours);
+  //console.log(minutes);
+  document.getElementById('result_time_converter').innerHTML = hours + ":" + minutes;
+}
+
+// Convert the letters of a given string in alphabetical order
+function alphabet_Soup() {
+  var word = document.getElementById('word_alphabet_Soup').value;
+  document.getElementById('result_alphabet_Soup').innerHTML = word.split("").sort().join("");
+}
+
+// Check if the characters a and b are separated by exactly 3 places anywhere in a given string
+function ab_Check() {
+  var word = document.getElementById('word_ab_Check').value;
+  if ((/a...b/).test(word) || (/b...a/).test(word)) {
+  document.getElementById('result_ab_Check').innerHTML = '"a" and "b" are separated by exactly by 3 places.';
+} else {
+  document.getElementById('result_ab_Check').innerHTML = '"a" and "b" are not separated by 3 places.';
+}
+}
+
+// Count the number of vowels of a given string
+function vowel_Count() {
+  var word = document.getElementById('word_vowel_Count').value;
+  var vowels = word.replace(/[^aeiou]/g, "");
+  var numv = vowels.length;
+  // console.log(vowels);
+  document.getElementById('result_vowel_Count').innerHTML = "Number of vowels : " ;
+}
+
+// Check if a given string contains equal number of p's and t's present
+function equal_pt() {
+  var word = document.getElementById('word_equal_pt').value;
+  var word_p = word.replace(/[^p]/g, "");
+  var word_s = word.replace(/[^s]/g, "");
+  var p_num = word_p.length;
+  var s_num = word_s.length;
+  if(p_num === s_num){
+  document.getElementById('result_equal_pt').innerHTML =  'There are an qual number of "p" and "s" in the word.';
+} else {
+  document.getElementById('result_equal_pt').innerHTML = 'The number os "p" and "s" is not equal in the word.';
+}
+}
+
+// Divide two positive numbers and return a string with formatted commas
+function division_string() {
+  var num1 = +document.getElementById('num1_division_string').value;
+  var num2 = +document.getElementById('num2_division_string').value;
+  var div = Math.round(num1 / num2).toString();
+  var result_array = div.split("");
+  if (div <= 1000) {
+    for (var i = div.length - 3; i > 0; i -= 3) {
+      result_array.splice(i, 0, ",");
+    }
+    document.getElementById('result_division_string').innerHTML = result_array;
+  } else {
+  document.getElementById('result_division_string').innerHTML = "The Number resulting from the division is to large.";
+  }
+}
+
+// Create a new string of specified copies of a given string
+function string_copies() {
+  var word = document.getElementById('word_string_copies').value;
+  var num  = +document.getElementById('num_string_copies').value;
+
+  if (num < 0) {
+    document.getElementById('result_string_copies').innerHTML = "Not a valid Number.";
+  }else {
+    document.getElementById('result_string_copies').innerHTML = "The result is : " + word.repeat(num);
+  }
+}
+
+// Create a new string of 4 copies of the last 3 characters of a given original string
+function newstring() {
+  var word = document.getElementById('word_newstring').value;
+  if (word.length >= 3) {
+    var result_str = word.substring(word.length - 3) + " ";
+    document.getElementById('result_newstring').innerHTML = "The result is : " + result_str.repeat(4) + ".";
+  } else {
+    document.getElementById('result_newstring').innerHTML = "The word is not long enough.";
+  }
+}
+
+// Extract the first half of a string of even length
+function first_half() {
+  var word = document.getElementById('word_first_half').value;
+  if (word.length % 2 === 0) {
+    document.getElementById('result_first_half').innerHTML = "The result is : " + word.slice(0, word.length / 2);
+  } else {
+    document.getElementById('result_first_half').innerHTML = "The word dosen't have the required length."
+  }
+}
+
+// Create a new string without the first and last character of a given string
+function without_first_end() {
+  var word =document.getElementById('word_without_first_end').value;
+  document.getElementById('result_without_first_end').innerHTML = "The result is : " + word.substring(1, word.length - 1);
+}
+
+// Concatenate two strings except their first character
+function concatenate() {
+  var word1 = document.getElementById('word1_concatenate').value;
+  var word2 = document.getElementById('word2_concatenate').value;
+  var str1 = word1.substring(1, word1.length);
+  var str2 = word2.substring(1, word2.length);
+  document.getElementById('result_concatenate').innerHTML = "The result is : " + str1 + str2 +".";
+}
+
+// Move last three character to the start of a specified string
+function right_three() {
+  var word = document.getElementById('word_right_three').value;
+  if(word.length > 1) {
+    //console.log(word.slice(-3));
+    document.getElementById('result_right_three').innerHTML = "The result is : " + word.slice(-3) + word.slice(0, -3);
+  } else {
+    document.getElementById('result_right_three').innerHTML = "Return the word : " + word;
+  }
+}
+
+// Create a string using the middle three characters of a given string of odd length
+function middle_three() {
+  var word = document.getElementById('word_middle_three').value;
+  if(word.length % 2 != 0) {
+    mid = (word.length + 1) / 2;
+    document.getElementById('result_middle_three').innerHTML = "The result is : " + word.slice(mid - 2, mid + 1);
+  } else {
+    document.getElementById('result_middle_three').innerHTML = "The result is : " + word;
+  }
+}
+
+// Concatenate two strings and return the result
+function str_con_cat() {
+  var word1 = document.getElementById('word1_str_con_cat').value;
+  var word2 = document.getElementById('word2_str_con_cat').value;
+  const m = Math.min(word1.length, word2.length);
+  document.getElementById('result_str_con_cat').innerHTML = "The result is : " + word1.substring(word1.length - m) + word2.substring(word2.length - m);
+}
+
+// Test if a string end with "Script"
+function end_script() {
+  var word = document.getElementById('word_end_script').value;
+  if (word.substring(word.length - 6, word.length) === 'Script') {
+    document.getElementById('result_end_script').innerHTML = "The word end with 'Script'.";
+  } else {
+    document.getElementById('result_end_script').innerHTML = "The word dose not end with 'Script'.";
+  }
+}
+
+// Display the city name if the string begins with "Los" or "New" otherwise return blank
+function city_name() {
+  var word = document.getElementById('word_city_name').value;
+  if (word.length >= 3 && ((word.substring(0, 3) == 'Los') || (word.substring(0, 3) == 'New'))) {
+    document.getElementById('result_city_name').innerHTML = "The result is : " + word + '.';
+  } else {
+    document.getElementById('result_city_name').innerHTML = "Blank.";
+  }
+}
+
+// Create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'
+function nop() {
+  var word = document.getElementById('word_nop').value;
+  var start_pos = 0;
+  var end_pos  = word.length;
+  if (word.length > 0 && word.charAt(0) == 'P') {
+    start_pos = 1;
+  }
+  if (word.length > 1 && word.charAt(word.length - 1) == 'P') {
+    end_pos--;
+  }
+  document.getElementById('result_nop').innerHTML = "The result is : " + word.substring(start_pos, end_pos);
+}
+
+// Create a new string taking the first and last n characters from a given string
+function two_string() {
+  var word = document.getElementById('word_two_string').value;
+  var num  = +document.getElementById('num_two_string').value;
+  var first_part = word.substring(0, num);
+  var last_part  = word.substring(word.length - num);
+  document.getElementById('result_two_string').innerHTML = "The result is : " + first_part + last_part + ".";
+}
+
+// Compute the sum of three elements of a given array of integers of length 3
+function sum_three() {
+  var num1 = +document.getElementById('num1_sum_three').value;
+  var num2 = +document.getElementById('num2_sum_three').value;
+  var num3 = +document.getElementById('num3_sum_three').value;
+  var nums = [num1, num2, num3];
+  document.getElementById('result_sum_three').innerHTML = "The result is : " + (nums[0] + nums[1] + nums[2]);
+}
+
+// Rotate the elements left of a given array of integers of length 3
+function rotate_elements_left() {
+  var num1 = +document.getElementById('num1_rotate_elements_left').value;
+  var num2 = +document.getElementById('num2_rotate_elements_left').value;
+  var num3 = +document.getElementById('num3_rotate_elements_left').value;
+  var nums = [num1, num2, num3];
+  document.getElementById('result_rotate_elements_left').innerHTML = "The result is : " + [nums[1], nums[2], nums[0]];
+}
+
+// Add two positive integers without carry
+function add_two_int_without_carrying() {
+  var n1 = +document.getElementById('num1_add_two_int_without_carrying').value;
+  var n2 = +document.getElementById('num2_add_two_int_without_carrying').value;
+  var result = 0;
+  var x = 1;
+  while(n1 > 0 && n2 > 0) {
+    result += x * ((n1 + n2) % 10);
+    n1 = Math.floor(n1 / 10);
+    n2 = Math.floor(n2 / 10);
+    x *= 10;
+  }
+  document.getElementById('result_add_two_int_without_carrying').innerHTML = "The result is : " + result;
+}
+
+// Find the types of a specified array
+function angle_Type() {
+var angle = +document.getElementById("angle_angle_Type").value;
+  if(angle < 180) {
+    document.getElementById("result_angle_Type").innerHTML = "Obtuse angle.";
+  }
+  if(angle === 90) {
+    document.getElementById("result_angle_Type").innerHTML = "Right angle.";
+  }
+  if(angle < 90) {
+    document.getElementById("result_angle_Type").innerHTML = "Acute angle.";
+  }
+  if(angle === 180) {
+  document.getElementById("result_angle_Type").innerHTML = "Straight angle.";
   }
 }
