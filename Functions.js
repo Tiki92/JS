@@ -917,3 +917,39 @@ var angle = +document.getElementById("angle_angle_Type").value;
   document.getElementById("result_angle_Type").innerHTML = "Straight angle.";
   }
 }
+
+// Switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case
+function change_case(new_str) {
+  var new_str = document.getElementById('word_change_case').value;
+  var x = 0;
+  var y = 0;
+
+  for (var i = 0; i < new_str.length; i++) {
+    if (/[A-Z]/.test(new_str[i])) {
+      x++;
+    } else y++;
+  }
+
+  if (y > x) return document.getElementById('result_change_case').innerHTML = "The result is : " + new_str.toLowerCase() + ".";
+  return document.getElementById('result_change_case').innerHTML = "The result is : " + new_str.toUpperCase() + ".";
+}
+
+// Rearrange characters of a given string in such way that it will become equal to another given string
+function rearrangement_characters() {
+  var str1 = document.getElementById('word1_rearrangement_characters').value;
+  var str2 = document.getElementById('word2_rearrangement_characters').value;
+  var first_set = str1.split(''),
+      second_set = str2.split(''),
+      result = document.getElementById('result_rearrangement_character').innerHTML = "The words can be rearranged.";
+
+  first_set.sort();
+  second_set.sort();
+
+  for (var i = 0; i < Math.max(first_set.length, second_set.length); i++) {
+    if (first_set[i] !== second_set[i]) {
+      result = document.getElementById('result_rearrangement_character').innerHTML = "The words can't be rearranged.";
+    }
+
+  }
+document.getElementById('result_rearrangement_character').innerHTML = result;
+}
