@@ -953,3 +953,16 @@ function rearrangement_characters() {
   }
 document.getElementById('result_rearrangement_character').innerHTML = result;
 }
+
+// Check whether a given string represents a correct sentence or not
+function is_correct_Sentace() {
+  var input_str = document.getElementById('sentance_is_correct_Sentance').value;
+  var first_char = input_str[0];
+  var last_char = input_str[input_str.length - 1];
+  if (/[A-Z]/.test(first_char) && last_char == ".") {
+    document.getElementById("result_is_correct_Sentence").innerHTML = "The Sentence is correct.";
+  } else {
+    document.getElementById('result_is_correct_Sentence').innerHTML = "The Sentence is NOT correct."
+  }
+
+}
