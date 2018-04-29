@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Date</title>
+
+  </head>
+  <body onload="animate_string('target')">
+    <!-- Animate String -->
+    <div >
+    <p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
+    </div>
+
+    <h2>JavaScript Date : 53 Exercises</h2>
+
+    <!-- Check whether an input is a date object or not -->
+    <p>_________________________________________</p>
+    <div class="function1">
+    <p>Check whether an input is a date object or not</p>
+    <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the current date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the current date :</p>
+      <button type="button" name="button" onclick="curDay()">Get Result</button>
+      <p id="result_curDay"></p>
+    </div>
+
+    <!-- Get the number of days in a month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <form class="form1" action="index.html" method="post">
+        Enter the Month : <input type="number" id="month_getDaysInMonth"><br>
+        Enter the Year : <input type="number" id="year_getDaysInMonth">
+      </form>
+      <button type="button" name="button" onclick="getDaysInMonth()">Get Result</button>
+      <p id="result_getDaysInMonth"></p>
+    </div>
+
+    <!-- Get the month name from a particular date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the month name from a particular date :</p>
+      <form class="form1" action="index.html" method="post">
+      Date : 10/11/2009.
+      </form>
+      <button type="button" name="button" onclick="getName()">Get the Month Name</button>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Comparison between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Comparison between two dates :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter first Date : <input type="date" id="date1_compare_date"><br>
+        Enter second Date : <input type="date" id="date2_compare_date">
+      </form>
+      <button type="button" name="button" onclick="compare_dates()">Get Result</button>
+      <p id="result_compare_date"></p>
+    </div>
+
+    <!-- Add minutes to a Date object -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Add minutes to a Date object :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Check whether a date is a weekend date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Check whether a date is a weekend date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Difference between two dates in days -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Difference between two dates in days :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter first date : <input type="date" id="date1_date_diff_indays"><br>
+        Enter second date : <input type="date" id="date2_date_diff_indays">
+      </form>
+      <button type="button" name="button" onclick="date_diff_indays()">Get Result</button>
+      <p id="result_date_diff_indays"></p>
+    </div>
+
+    <!-- Find out the last day of a month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Find out the last day of a month :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Find out which day was in yesterday -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Find out which day was in yesterday :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Maximum date from an array of dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Maximum date from an array of dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Minimum date from an array of dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Minimum date from an array of dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Return the number of minutes in hours and minutes -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Return the number of minutes in hours and minutes :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter the number of Minutes : <input type="number" id="minutes_timeConvert">
+      </form>
+      <button type="button" name="button" onclick="timeConvert()">Get Result</button>
+      <p id="result_timeConvert"></p>
+    </div>
+
+    <!-- Get the amount of days of a year -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the amount of days of a year :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter a Year : <input type="number" id="year_days_of_a_year">
+      </form>
+      <button type="button" name="button" onclick="days_of_a_year()">Get Result</button>
+      <p id="result_days_of_a_year"></p>
+    </div>
+
+    <!-- Get the quarter of the year -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the quarter of the year :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Count the number of days passed since beginning of the year -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Count the number of days passed since beginning of the year :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Convert a Unix timestamp to time -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Convert a Unix timestamp to time :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Calculate age -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Calculate age :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the day of the month, 2 digits with leading zeros -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the day of the month, 2 digits with leading zeros :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+
+    <!-- Get a textual representation of a day -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a textual representation of a day :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a full textual representation of the day of the week -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a full textual representation of the day of the week :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get ISO-8601 numeric representation of the day of the week -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get ISO-8601 numeric representation of the day of the week :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get English ordinal suffix for the day of the month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get English ordinal suffix for the day of the month :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get ISO-8601 week number of year, weeks starting on Monday -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get ISO-8601 week number of year, weeks starting on Monday :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a full textual representation of a month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a full textual representation of a month :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a numeric representation of a month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a numeric representation of a month :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a short textual representation of a month -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a short textual representation of a month :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!--  Get a full numeric representation of a year -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p> Get a full numeric representation of a year :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a two digit representation of a year -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a two digit representation of a year :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get lowercase Ante meridiem and Post meridiem -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get lowercase Ante meridiem and Post meridiem :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get uppercase Ante meridiem and Post meridiem -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get uppercase Ante meridiem and Post meridiem :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- swatch Internet time -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Swatch Internet time :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get 12-hour format of an hour with leading zeros -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get 12-hour format of an hour with leading zeros :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get 24-hour format of an hour without leading zeros -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get 24-hour format of an hour without leading zeros :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get minutes with leading zeros -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get minutes with leading zeros :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get seconds with leading zeros -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get seconds with leading zeros :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get Timezone -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get Timezone :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Find whether or not the date is in daylights savings time -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Find whether or not the date is in daylights savings time :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get difference to Greenwich time in hours -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get difference to Greenwich time in hours :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get timezone offset in seconds -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get timezone offset in seconds :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Add specified years to a date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Add specified years to a date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Add specified weeks to a date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Add specified weeks to a date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Add specified months to a date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Add specified months to a date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in minutes between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get time differences in minutes between two dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in hours between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get time differences in hours between two dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in days between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+    <p>Get time differences in days between two dates :</p>
+    <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in weeks between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get time differences in weeks between two dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in months between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get time differences in months between two dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get time differences in years between two dates -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get time differences in years between two dates :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the week start date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the week start date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the week end date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the week end date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the month start date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the month start date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get the month end date -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get the month end date :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+    <script src="\JavaScript_Functions.js"></script>
+    <script src="JavaScript_Date.js"></script>
+  </body>
+</html>

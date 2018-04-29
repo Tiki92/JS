@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Validation with Regular Expression</title>
+  </head>
+  <body onload="animate_string('target')">
+    <!-- Animate String -->
+    <div >
+    <p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
+    </div>
+
+  <h2>JavaScript Validation with Regular Expression : 20 Exercises</h2>
+
+  <!-- Check whether the first character of a string is uppercase or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether the first character of a string is uppercase or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Word : <input type="text" id="word_upper_case">
+    </form>
+    <button type="button" name="button" onclick="upper_case()">Get Result</button>
+    <p id="result_upper_case"></p>
+  </div>
+
+  <!-- Check whether a credit card number format is like 9999-9999-9999-9999 -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a credit card number format is like 9999-9999-9999-9999 :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Card Number : <input type="text" id="card_is_creditCard">
+    </form>
+    <button type="button" name="button" onclick="is_creditCard()">Get Result</button>
+    <p id="result_is_creditCard"></p>
+  </div>
+
+  <!-- Check whether the pattern of an e-mail address matches a specific format -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether the pattern of an e-mail address matches a specific format :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter an e-mail addres : <input type="text" id="email_valid_email">
+    </form>
+    <button type="button" name="button" onclick="valid_email()">Get Result</button>
+    <p id="result_valid_email"></p>
+  </div>
+
+  <!-- Search a date within a string -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Search a date within a string :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Date : <input type="text" id="date_is_dateString">
+    </form>
+    <button type="button" name="button" onclick="is_dateString()">Get Result</button>
+    <p id="result_is_dateString"></p>
+  </div>
+
+  <!-- Alternet of trim function using regular expression -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Alternet of trim function using regular expression :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Word : <input type="text" id="word_Trim">
+    </form>
+    <button type="button" name="button" onclick="Trim()">Get Result</button>
+    <p id="result_Trim"></p>
+  </div>
+
+  <!-- Count number of words in string -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Count number of words in string :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Sentence : <input type="text" id="sentence_count_words">
+    </form>
+    <button type="button" name="button" onclick="count_words()">Get Result</button>
+    <p id="result_count_words"></p>
+  </div>
+
+  <!-- Check whether a given value is IP value or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is IP value or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter an IP : <input type="text" id="IP_is_IP">
+    </form>
+    <button type="button" name="button" onclick="is_IP()">Get Result</button>
+    <p id="result_is_IP"></p>
+  </div>
+
+  <!-- Count the number of vowels in a given string -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Count the number of vowels in a given string :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Sentence : <input type="text" id="sentence_vowel_count">
+    </form>
+    <button type="button" name="button" onclick="vowel_count()">Get Result</button>
+    <p id="result_vowel_count"></p>
+  </div>
+
+  <!-- Check whether a given value is an valid url or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is an valid url or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter an URL : <input type="text" id="url_is_url">
+    </form>
+    <button type="button" name="button" onclick="is_url()">Get Result</button>
+    <p id="result_is_url"></p>
+  </div>
+
+  <!-- Check whether a given value is alpha numeric or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is alpha numeric or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter Somethning : <input type="text" id="something_is_alphaNumeric">
+    </form>
+    <button type="button" name="button" onclick="is_alphaNumeric()">Get Result</button>
+    <p id="result_is_alphaNumeric"></p>
+  </div>
+
+  <!-- Check whether a given value is time string or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is time string or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Time : <input type="text" id="time_is_timeString">
+    </form>
+    <button type="button" name="button" onclick="is_timeString()">Get Result</button>
+    <p id="result_is_timeString"></p>
+  </div>
+
+  <!-- Check whether a given value is US zip code or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is US zip code or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a ZipCode : <input type="text" id="zip_is_usZipCode">
+    </form>
+    <button type="button" name="button" onclick="is_usZipCode()">Get Result</button>
+    <p id="result_is_usZipCode"></p>
+  </div>
+
+  <!-- Check whether a given value is UK Post Code or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is UK Post Code or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Zip Code : <input type="text" id="zip_is_ukPostCode">
+    </form>
+    <button type="button" name="button" onclick="is_ukPostCode()">Get Result</button>
+    <p id="result_is_ukPostCode"></p>
+  </div>
+
+  <!-- Check whether a given value is Canada Post Code or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is Canada Post Code or not :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Zip Code : <input type="text" id="zip_is_caPostalCode">
+    </form>
+    <button type="button" name="button" onclick="is_caPostalCode()">Get Result</button>
+    <p id="result_is_caPostalCode"></p>
+  </div>
+
+  <!-- Check whether a given value is a social security number or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is a social security number or not  :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Social Security Code : <input type="text" id="SC_is_social_SC">
+    </form>
+    <button type="button" name="button" onclick="is_social_SC()">Get Result</button>
+    <p id="result_is_social_SC"></p>
+  </div>
+
+  <!-- Check whether a given value is hexadecimal value or not -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Check whether a given value is hexadecimal value or not :</p>
+    <div class="function1">
+      <form class="form1" action="index.html" method="post">
+        Enter a Hexadecimal Value : <input type="text" id="str_is_hexadecimal">
+      </form>
+      <button type="button" name="button" onclick="is_hexadecimal()">Get Result</button>
+      <p id="result_is_hexidecimal"></p>
+    </div>
+
+    <!-- Check whether a given value is hexcolor value or not -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Check whether a given value is hexcolor value or not :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter a Hex Color : <input type="text" id="str_is_hexcolor">
+      </form>
+      <button type="button" name="button" onclick="is_hexcolor()">Get Result</button>
+      <p id="result_is_hexcolor"></p>
+    </div>
+
+    <!-- Check whether a given value represents a domain or not -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Check whether a given value represents a domain or not :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter a Domain : <input type="text" id="str_is_domain">
+      </form>
+      <button type="button" name="button" onclick="is_domain()">Get Result</button>
+      <p id="result_is_domain"></p>
+    </div>
+
+    <!-- Check whether a given value is html or not -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Check whether a given value is html or not :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter a a HTML Value : <input type="text" id="str_is_html">
+      </form>
+      <button type="button" name="button" onclick="is_html()">Get Result</button>
+      <p id="result_is_html"></p>
+    </div>
+
+    <!-- Check a given value contains alpha, dash and underscore -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Check a given value contains alpha, dash and underscore :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter Something : <input type="text" id="something_is_alphaDash">
+      </form>
+      <button type="button" name="button" onclick="is_alphaDash()">Get Result</button>
+      <p id="result_is_alphaDash"></p>
+    </div>
+
+    <!-- Print an integer with commas as thousands separators -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Print an integer with commas as thousands separators :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter a Number : <input type="text" id="num_thousands_separators">
+      </form>
+      <button type="button" name="button" onclick="thousands_separators()">Get Result</button>
+      <p id="result_thousands_separators"></p>
+    </div>
+    <script src="\JavaScript_Functions.js"></script>
+    <script src="JavaScript_Regular_Expression.js"></script>
+  </body>
+</html>
