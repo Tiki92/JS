@@ -13,7 +13,7 @@ function getFormvalue()
   var x=document.getElementById("form1");
   for (var i=0;i<x.length;i++)
   {
-   if (x.elements[i].value!='Submit')
+   if (x.elements[i].value!=='Submit')
     {
       document.getElementById("result_getFormvalue").innerHTML = (x.elements[i].value);
      }
