@@ -1,3 +1,11 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
 console.log("JavaScript_Functions :");
 console.log("                      ");
 
@@ -21,10 +29,12 @@ function test_prime(n)
         return false;
       }
     }
+
     return true;
   }
 }
-console.log("JavaScript: Check a number is prime or not :")
+console.log("_________________________________________");
+console.log("JavaScript: Check a number is prime or not :");
 console.log(test_prime(37));
 
 // JavaScript: Generates all combinations of a string
@@ -54,6 +64,7 @@ for (var i = 0; i < slent ; i++)
 }
   console.log(combi.join("\n"));
 }
+console.log("_________________________________________");
 console.log("JavaScript: Generates all combinations of a string :");
 substrings("dog");
 
@@ -75,6 +86,7 @@ if (typeof value === "object" || typeof value === "function")
 
     return typeof value;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Get the data type :");
 console.log(detect_data_type(12));
 console.log(detect_data_type('w3resource'));
@@ -103,6 +115,7 @@ function matrix(n) {
              console.log('----------');
            }
        }
+       console.log("_________________________________________");
        console.log("JavaScript: Returns n rows by n columns identity matrix :");
 matrix(4);
 
@@ -127,6 +140,7 @@ function Second_Greatest_Lowest(arr_num) {
   //console.log(result);
   return result.join(',');
 }
+console.log("_________________________________________");
 console.log("JavaScript: Second lowest and second greatest numbers from an array :");
 console.log(Second_Greatest_Lowest([1,2,3,4,5]));
 
@@ -148,6 +162,7 @@ function factors(n) {
       return x - y;}); //numeric sort
   return num_factors;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Compute the factors of a positive integers :");
 console.log(factors(15));
 console.log(factors(16));
@@ -171,6 +186,7 @@ function amountTocoins(amount, coins) {
     }
   }
 }
+console.log("_________________________________________");
 console.log("JavaScript: Convert an amount to coins :");
 console.log(amountTocoins(46, [25, 10, 5, 2, 1]));
 
@@ -182,6 +198,7 @@ function exp(b, n) {
   }
   return ans;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Compute the value of bn where n is the exponent and b is the bases :");
 console.log(exp(2, 3));
 
@@ -191,6 +208,7 @@ var uchars = {};
 str1.replace(/\S/g, function(l){uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1);});
 return uchars;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Number of occurrences of each letter in specified string :");
 console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));
 
@@ -223,6 +241,7 @@ function array_binarySearch(narray, delement) {
 }
 
  var myArray = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
+ console.log("_________________________________________");
  console.log("JavaScript: Search JavaScript arrays with a binary search :");
  console.log(array_binarySearch(myArray, 6));
 
@@ -235,6 +254,7 @@ function BiggerElements(val)
      };
    }
 var result = [11, 45, 4, 31, 64, 10]. filter(BiggerElements(10));
+console.log("_________________________________________");
 console.log("JavaScript: Bigger elements in an array :");
 console.log(result);
 
@@ -265,6 +285,7 @@ for(var x = 0; x < Math.pow(2, arra.length); x++)
 
     return result_set;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Get all possible subset with a fixed length combinations in an array :");
 console.log(subset([1, 2, 3], 2));
 
@@ -291,6 +312,7 @@ function find_FirstNotRepeatedChar(str) {
   }
   return result;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Find the first not repeated character :");
 console.log(find_FirstNotRepeatedChar('abacddbec'));
 
@@ -316,7 +338,8 @@ function bubble_Sort(a)
     } while (swapp);
  return x;
 }
-
+console.log("_________________________________________");
+console.log("JavaScript: Bubble Sort algorithm");
 console.log(bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
 
 // JavaScript: Accept a list of words and returns the longest
@@ -328,6 +351,7 @@ function Longest_Country_Name(country_name)
   },
 "");
 }
+console.log("_________________________________________");
 console.log("JavaScript: Accept a list of words and returns the longest :");
 console.log(Longest_Country_Name(["Australia", "Germany", "United States of America"]));
 
@@ -362,9 +386,9 @@ hash[input.charAt(j)] = {index:j};
 }
 return longest_string.length > str.length ? longest_string : str;
 }
+console.log("_________________________________________");
 console.log("JavaScript: Find longest substring in a given a string without repeating characters :");
 console.log(longest_substring_without_repeating_characters("google.com"));
-
 console.log(longest_substring_without_repeating_characters("example.com"));
 
 // JavaScript: The longest palindrome in a specified string
@@ -401,9 +425,9 @@ maxp = sub_subs_str;
 
 return maxp;
 }
+console.log("_________________________________________");
 console.log("JavaScript: The longest palindrome in a specified string :");
 console.log(longest_palindrome("abracadabra"));
-
 console.log(longest_palindrome("HYTBCABADEFGHABCDEDCBAGHTFYW12345678987654321ZWETYGDE"));
 
 // JavaScript: Pass a JavaScript function as parameter
@@ -415,6 +439,7 @@ function addStudent(id, refreshCallback)
 function refreshStudentList() {
     console.log('Hello');
 }
+console.log("_________________________________________");
 console.log("JavaScript: Pass a JavaScript function as parameter :");
 addStudent(1, refreshStudentList);
 
@@ -422,5 +447,6 @@ addStudent(1, refreshStudentList);
 function abc() {
     console.log( arguments.callee.name );
 }
+console.log("_________________________________________");
 console.log("JavaScript: Get the function name :");
 abc();

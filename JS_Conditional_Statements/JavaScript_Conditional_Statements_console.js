@@ -1,5 +1,17 @@
+
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Conditional_Statemements :");
+console.log("                      ");
 // JavaScript: For loop that will iterate from 0 to 15 to find even and odd numbers
 function iterateEvenOdd() {
+  console.log("_________________________________________");
   console.log("JavaScript: For loop that will iterate from 0 to 15 to find even and odd numbers :");
   for (var x=0; x<=15; x++) {
         if (x === 0) {
@@ -44,5 +56,6 @@ f5 = f5+(num + ", ") ;
 
     num++ ;
 }
+console.log("_________________________________________");
 console.log("Find and print the first 5 happy numbers :")
 console.log('First 5 happy numbers are : '+f5);

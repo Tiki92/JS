@@ -1,3 +1,13 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Math: ");
+console.log("                      ");
 // Convert a number from one base to another
 var base_convert = function(number, initial_base, change_base) {
    if ((initial_base && change_base) <2 || (initial_base && change_base)>36)

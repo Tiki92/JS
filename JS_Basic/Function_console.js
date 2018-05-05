@@ -1,10 +1,20 @@
-
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Basic :");
+console.log("_________________________________________");
 // Check if 1 appears in first or last position of a given array of integers
 function first_last_1(nums)
 {
   var end_pos = nums.length - 1;
   return nums[0] == 1 || nums[end_pos] == 1;
 }
+
 console.log('Check if 1 appears in first or last position of a given array of integers:');
 console.log(first_last_1([1, 3, 5]));
 console.log(first_last_1([1, 3, 5, 1]));
@@ -18,6 +28,7 @@ function first_last_same(nums)
        return nums[0] == nums[end];
     } else {return false;}
 }
+console.log("_________________________________________");
 console.log("Check if the first and last elements are equal of a given array of integers length 3:");
 console.log(first_last_same([10, 20, 30]));
 console.log(first_last_same([10, 20, 30, 10]));
@@ -28,6 +39,7 @@ function reverse3(array) {
     return array.map((element, idx, arr) => arr[(arr.length - 1) - idx]);
 
 }
+console.log("_________________________________________");
 console.log("Reverse the elements of a given array of integers length 3:");
 console.log(reverse3([5, 4, 3]));
 console.log(reverse3([1, 0, -1]));
@@ -44,6 +56,7 @@ function all_max(nums)
 
     return nums;
 }
+console.log("_________________________________________");
 console.log("Find the larger value between the first or last and set all the other elements with that value");
 console.log(all_max([20, 30, 40]));
 console.log(all_max([-7, -9, 0]));
@@ -57,6 +70,7 @@ function middle_elements(a, b)
 
     return new_array;
 }
+console.log("_________________________________________");
 console.log("Create a new array taking the middle elements of the two arrays of integer and each length 3 :");
 console.log(middle_elements([1, 2, 3], [1, 5, 6]));
 console.log(middle_elements([3, 3, 3], [2, 8, 0]));
@@ -69,6 +83,7 @@ function started(nums) {
 
      return array1;
 }
+console.log("_________________________________________");
 console.log("Create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1 :")
 console.log(started([20, 20, 30]));
 console.log(started([5, 2, 7, 8]));
@@ -85,6 +100,7 @@ function contins13(nums) {
        return false
     }
 }
+console.log("_________________________________________");
 console.log("Test if an array of integers of length 2 contains 1 or a 3 :")
 console.log(contins13([1, 5]));
 console.log(contins13([2, 3]));
@@ -96,6 +112,7 @@ function twice3040(arra1) {
         b = arra1[1];
     return (a === 30 && b === 30) || (a === 40 && b === 40);
 }
+console.log("_________________________________________");
 console.log("est if a given array of integers contains 30 and 40 twice :");
 console.log(twice3040([30, 30]));
 console.log(twice3040([40, 40]));
@@ -107,6 +124,7 @@ function swap(arra) {
     [arra[0], arra[arra.length - 1]] = [arra[arra.length - 1], arra[0]];
     return arra;
 }
+console.log("_________________________________________");
 console.log("Swap the first and last elements of a given array of integers :");
 console.log(swap([1, 2, 3, 4]));
 console.log(swap([0, 2, 1]));
@@ -117,6 +135,7 @@ function add_two_digits(n)
    {
       return n % 10 + Math.floor(n / 10);
    }
+console.log("_________________________________________");
 console.log("Add two digits of a given positive integer of length two :");
 console.log(add_two_digits(25))
 console.log(add_two_digits(50))
@@ -128,6 +147,7 @@ function longest_string(str_ara) {
   result = str_ara.filter(v => v.length == max);
   return result;
 }
+console.log("_________________________________________");
 console.log("Find the longest string from an given array of strings :");
 console.log(longest_string(['a', 'aa', 'aaa',
                                           'aaaaa','aaaa']))
@@ -142,6 +162,7 @@ function alphabet_char_Shift(str) {
   }
   return all_chars.join("");
 }
+console.log("_________________________________________");
 console.log("Replace each character of a given string by the next one in the English alphabet :")
 console.log(alphabet_char_Shift("abcdxyz"))
 
@@ -156,6 +177,7 @@ function alternate_Sums(arr) {
   }
   return result
 }
+console.log("_________________________________________");
 console.log("Compute the sum of two parts and store into an array of size two :");
 console.log(alternate_Sums([1, 2, 3, 4, 5, 6]))
 
@@ -183,6 +205,7 @@ function array_checking(arra1, arra2) {
   }
   return false;
 }
+console.log("_________________________________________");
 console.log("Check whether two arrays of integers and same length are similar or not :");
 console.log(array_checking([10,20,30], [10,20,30]))
 console.log(array_checking([10,20,30], [30,10,20]))
@@ -192,6 +215,7 @@ console.log(array_checking([10,20,30,40], [10,30,20,40]))
 function check_arithmetic_Expression(x, y, z) {
   return x + y == z || x * y == z || x / y == z || x - y == z;
 }
+console.log("_________________________________________");
 console.log("Check whether it is possible to replace $ in a specified expression :");
 console.log(check_arithmetic_Expression(10, 25, 35))
 console.log(check_arithmetic_Expression(10, 25, 250))
@@ -218,6 +242,7 @@ function Kth_greatest_in_array(arr, k) {
 
   return arr[k - 1];
 }
+console.log("_________________________________________");
 console.log("Find the kth greatest element of a given array of integers :");
 console.log(Kth_greatest_in_array([1,2,3,4,5], 3))
 console.log(Kth_greatest_in_array([-10,-25,-47,-36,0], 1))
@@ -238,6 +263,7 @@ function array_max_consecutive_sum(nums, k) {
   }
   return result;
 }
+console.log("_________________________________________");
 console.log("Find the maximum possible sum of some of its k consecutive numbers of a specified array of positive integers");
 console.log(array_max_consecutive_sum([1, 2, 3, 14, 5], 2))
 console.log(array_max_consecutive_sum([2, 3, 5, 1, 6], 3))
@@ -254,6 +280,7 @@ function max_difference(arr) {
 	  }
 	return max;
 }
+console.log("_________________________________________");
 console.log("Find the maximal difference between any two adjacent elements of a given array of integers :");
 console.log(max_difference([1, 2, 3, 8, 9]))
 console.log(max_difference([1, 2, 3, 18, 9]))
@@ -274,6 +301,7 @@ function array_max_diff(arr) {
     }
     return max_result;
 }
+console.log("_________________________________________");
 console.log("Find the maximal difference among all possible pairs of a given array of integers :");
 console.log(array_max_diff([1, 2, 3, 8, 9]))
 console.log(array_max_diff([1, 2, 3, 18, 9]))
@@ -295,6 +323,7 @@ function array_element_mode(arr) {
   }
   return ans + 1;
 }
+console.log("_________________________________________");
 console.log("Find the number which appears most in a given array of integers :");
 console.log(array_element_mode([1, 2, 3, 2, 2, 8, 1, 9]))
 
@@ -308,6 +337,7 @@ function array_element_replace(arr, old_value, new_value) {
   return arr;
 }
 num = [1, 2, 3, 2, 2, 8, 1, 9];
+console.log("_________________________________________");
 console.log("Replace all the numbers with a specified number of a given array of integers :");
 console.log("Original Array: "+num);
 console.log(array_element_replace(num, 2, 5));
@@ -320,6 +350,7 @@ function sum_adjacent_difference(arr) {
 	}
 	return result;
 }
+console.log("_________________________________________");
 console.log("Compute the sum of absolute differences of consecutive numbers of a given array of integers :");
 console.log(sum_adjacent_difference([1, 2, 3, 2, -5]));
 
@@ -342,7 +373,7 @@ function build_Palindrome(new_str) {
     }
   }
 }
-
+console.log("_________________________________________");
 console.log(build_Palindrome("abcddc"))
 console.log(build_Palindrome("122"))
 
@@ -355,6 +386,7 @@ function check_common_element(arra1, arra2) {
   }
   return false;
 }
+console.log("_________________________________________");
 console.log("Check if there is at least one element which occurs in two given sorted arrays of integers :");
 console.log(check_common_element([1,2,3], [3,4,5]));
 console.log(check_common_element([1,2,3], [5,6,7]));
@@ -399,6 +431,7 @@ function test_string(input_str) {
 
   return true;
 }
+console.log("_________________________________________");
 console.log("Check whether a given string contains only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions :");
 console.log(test_string('xYr'));
 console.log(test_string('XXyx'));
@@ -414,6 +447,7 @@ function number_of_InversionsNaive(arr) {
     }
     return ctr;
 }
+console.log("_________________________________________");
 console.log("Find the number of inversions of a specified array of integers :");
 console.log(number_of_InversionsNaive([0, 3, 2, 5, 9]));
 console.log(number_of_InversionsNaive([1, 5, 4, 3]));
@@ -438,6 +472,7 @@ function digit_delete(num) {
     }
     return result;
 }
+console.log("_________________________________________");
 console.log("Find the maximal number from a given positive integer by deleting exactly one digit of the given number :");
 console.log(digit_delete(100));
 console.log(digit_delete(10));
@@ -456,6 +491,7 @@ function different_values(ara, n) {
     }
     return max_val
 }
+console.log("_________________________________________");
 console.log("Find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer :");
 console.log(different_values([12, 10, 33, 34], 10));
 console.log(different_values([12, 10, 33, 34], 24));
@@ -486,6 +522,7 @@ function digit_to_one(num) {
 
     return result;
 }
+console.log("_________________________________________");
 console.log("Find the number of times to replace a given number with the sum of its digits until it convert to a single digit number :");
 console.log(digit_to_one(123))
 console.log(digit_to_one(156))
@@ -499,6 +536,7 @@ function divide_digit(num, d) {
     }
     return num;
 }
+console.log("_________________________________________");
 console.log("Divide an integer by another integer as long as the result is an integer and return the result :");
 console.log(divide_digit(-12, 2))
 console.log(divide_digit(13, 2))
@@ -518,6 +556,7 @@ function arr_pairs(arr) {
       }
     return result;
 }
+console.log("_________________________________________");
 console.log("Find the number of sorted pairs formed by its elements of an given array of integers such that one element in the pair is divisible by the other on :");
 console.log(arr_pairs([1,2,3]))
 console.log(arr_pairs([2,4,6]))
@@ -531,6 +570,7 @@ function dot_product(vector1, vector2) {
   }
   return result;
 }
+console.log("_________________________________________");
 console.log("Create the dot products of two given 3D vectors :");
 console.log(dot_product([1,2,3], [1,2,3]))
 console.log(dot_product([2,4,6], [2,4,6]))
@@ -556,7 +596,7 @@ function sort_prime(num) {
 
   return prime_num1;
 }
-
+console.log("_________________________________________");
 console.log(sort_prime(5))
 console.log(sort_prime(11))
 console.log(sort_prime(19))
@@ -576,6 +616,7 @@ function find_numbers(arr_num, num) {
     }
     return -1;
 }
+console.log("_________________________________________");
 console.log("Find the number of even values in sequence before the first occurrence of a given number :");
 console.log(find_numbers([1,2,3,4,5,6,7,8], 5));
 console.log(find_numbers([1,3,5,6,7,8], 6));
@@ -588,6 +629,7 @@ function find_third_number(x, y, z) {
 	if(x==z) return y;
 	return x;
 }
+console.log("_________________________________________");
 console.log("Check a number from three given numbers where two numbers are equal, find the third one :");
 console.log(find_third_number(1,2,2))
 console.log(find_third_number(1,1,2))
@@ -605,6 +647,7 @@ function trailing_zeros_factorial(n) {
     }
     return result;
 }
+console.log("_________________________________________");
 console.log("Find the number of trailing zeros in the decimal representation of the factorial of a given number :");
 console.log(trailing_zeros_factorial(8))
 console.log(trailing_zeros_factorial(9))
@@ -623,6 +666,7 @@ function int_sum(num) {
     }
     return s_sum;
 }
+console.log("_________________________________________");
 console.log("Calculate the sum n + n/2 + n/4 + n/8 + .... :")
 console.log(int_sum(8))
 console.log(int_sum(9))
@@ -645,7 +689,7 @@ function is_diagonal_matrix(user_matrix) {
     }
     return true;
 }
-
+console.log("_________________________________________");
 console.log("Check whether a matrix is a diagonal matrix or not :")
 console.log(is_diagonal_matrix([[1, 0, 0], [0, 2, 0], [0, 0, 3] ]));
 console.log(is_diagonal_matrix([[1, 0, 0], [0, 2, 3], [0, 0, 3] ]));
@@ -679,6 +723,7 @@ function is_divisible_by3(mask_str) {
 
   return result;
 }
+console.log("_________________________________________");
 console.log("Find all the possible options to replace the hash in a string :");
 console.log(is_divisible_by3("2#0"))
 console.log(is_divisible_by3("4#2"))
@@ -702,6 +747,7 @@ function is_identity_Matrix(matrix_data) {
   }
   return true;
 }
+console.log("_________________________________________");
 console.log("Check if a given matrix is an identity matrix :");
 console.log(is_identity_Matrix([[1, 0, 0],  [0, 1, 0],  [0, 0, 1]]))
 console.log(is_identity_Matrix([[1, 0, 1],  [0, 1, 0],  [0, 0, 1]]))
@@ -711,6 +757,7 @@ function is_inrange(x, y, z)
 {
     return y >= x && y <= z;
 }
+console.log("_________________________________________");
 console.log("Check if a given number is in a given range :")
 console.log(is_inrange(1,2,3));
 console.log(is_inrange(1,2,-3));
@@ -727,6 +774,7 @@ function is_increasing_digits_Sequence(num) {
     }
   return true;
 }
+console.log("_________________________________________");
 console.log("Check if a given integer has an increasing digits sequence :")
 console.log(is_increasing_digits_Sequence(123));
 console.log(is_increasing_digits_Sequence(1223));
@@ -741,6 +789,7 @@ function check_a_point(a, b, x, y, r) {
     }
     return false;
 }
+console.log("_________________________________________");
 console.log("Check if a point lies strictly inside a given circle :")
 console.log(check_a_point(0, 0, 2, 4, 6));
 console.log(check_a_point(0, 0, 6, 8, 6));
@@ -757,6 +806,7 @@ function lower_triangular_matrix(user_matrix) {
     }
     return true;
 }
+console.log("_________________________________________");
 console.log("Check if a given matrix is lower triangular or not :")
 console.log(lower_triangular_matrix([[1, 0, 0],[2, 0, 0], [0, 3, 3]]));
 console.log(lower_triangular_matrix([[1, 0, 1],[2, 0, 0], [0, 3, 3]]));
@@ -774,6 +824,7 @@ function is_monotonous(num) {
     }
     return true;
 }
+console.log("_________________________________________");
 console.log("Check whether a given array of integers represents either a strictly increasing or a strictly decreasing sequence :")
 console.log(is_monotonous([1, 2, 3]));
 console.log(is_monotonous([1, 2, 2]))
@@ -787,6 +838,7 @@ function is_permutation(input_arr, n) {
     }
     return true;
 }
+console.log("_________________________________________");
 console.log("Find if the members of an given array of integers is a permutation of numbers from 1 to a given integer :")
 console.log(is_permutation([1, 2, 3, 4, 5], 5));
 console.log(is_permutation([1, 2, 3, 5], 5));
@@ -795,6 +847,7 @@ console.log(is_permutation([1, 2, 3, 5], 5));
 function test_logical_Nor(a, b) {
   return (!a && !b)
 }
+console.log("_________________________________________");
 console.log("Create the value of NOR of two given booleans :")
 console.log(test_logical_Nor(true, false));
 console.log(test_logical_Nor(false, false));
@@ -814,6 +867,7 @@ function longest_str_in_array(arra)
     }
     return ans;
 }
+console.log("_________________________________________");
 console.log("Find the longest string from a given array :")
 console.log(longest_str_in_array(["ab", "a", "abcd"]));
 console.log(longest_str_in_array(["ab", "ab", "ab"]));
@@ -828,6 +882,7 @@ function max_even(arra) {
       return arra[i];
     }
   }
+console.log("_________________________________________");
 console.log("Get the largest even number from an array of integers :")
 console.log(max_even([20, 40, 200]));
 console.log(max_even([20, 40, 200, 301]));
@@ -836,6 +891,7 @@ console.log(max_even([20, 40, 200, 301]));
 function mirror_bits(n) {
   return parseInt(n.toString(2).split("").reverse().join(""),2);
 }
+console.log("_________________________________________");
 console.log("Reverse the order of the bits in a given integer :")
 console.log(mirror_bits(56));
 console.log(mirror_bits(234));
@@ -847,6 +903,7 @@ function nearest_round_number(num) {
     }
     return num;
 }
+console.log("_________________________________________");
 console.log("Find the smallest round number that is not less than a given value :")
 console.log(nearest_round_number(56));
 console.log(nearest_round_number(592));
@@ -866,6 +923,7 @@ function next_Prime_num(num) {
         }
     }
 }
+console.log("_________________________________________");
 console.log("Find the smallest prime number strictly greater than a given number :")
 console.log(next_Prime_num(3));
 console.log(next_Prime_num(17));

@@ -1,3 +1,13 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_String:");
+console.log("                      ");
 // Check whether an 'input' is a string or not
 is_string = function(input) {
   if (Object.prototype.toString.call(input) === '[object String]')
@@ -5,7 +15,7 @@ is_string = function(input) {
   else
     return false;
     };
-
+console.log("_________________________________________");
 console.log("Check whether an 'input' is a string or not :");
 console.log(is_string('w3resource'));
 console.log(is_string([1, 2, 4, 0]));

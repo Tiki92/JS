@@ -1,9 +1,20 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Array :");
+console.log("                      ");
 // Array or not
 is_array = function(input) {
   if (toString.call(input) === "[object Array]")
     return true;
   return false;
     };
+console.log("_________________________________________");
 console.log("Is it an array or not :");
 console.log(is_array('w3resource'));
 console.log(is_array([1, 2, 4, 0]));
@@ -12,6 +23,7 @@ console.log(is_array([1, 2, 4, 0]));
 array_Clone = function(arra1) {
   return arra1.slice(0);
 };
+console.log("_________________________________________");
 console.log("Clone an array :");
 console.log(array_Clone([1, 2, 4, 0]));
 console.log(array_Clone([1, 2, [4, 0]]));
@@ -26,6 +38,7 @@ first = function(array, n) {
   return [];
   return array.slice(0, n);
 }
+console.log("_________________________________________");
 console.log("Get the first element of an array :");
 console.log(first([7, 9, 0 -2]));
 console.log(first([], 3));
@@ -41,6 +54,7 @@ last = function(array, n) {
   return array[array.length - 1];
   return array.slice(Math.max(array.length - n, 0));
 };
+console.log("_________________________________________");
 console.log("Get the last element of an array :");
 console.log(last([7, 9, 0, -2]));
 console.log(last([7, 9, 0, -2], 3));
@@ -48,6 +62,7 @@ console.log(last([7, 9 ,0, -2], 6));
 
 // Join all elements of an array into a string
 myColor = ["Red", "Green", "White", "Black"];
+console.log("_________________________________________");
 console.log("Join all elements of an array into a string :");
 console.log(myColor.toString());
 console.log(myColor.join());
@@ -70,12 +85,14 @@ for(let x=1; x<str.length; x++)
       result.push(str[x]);
      }
   }
+console.log("_________________________________________");
 console.log("Insert dashes (-) between each two even digits of a specific number :")
 console.log(result.join(''));
 }
 
 // Sort the items of an array
 function sort(arr){
+  console.log("_________________________________________");
   console.log("Sort the items of an array :");
 var a = arr.sort(function(a,b){return a - b})
 console.log(a);
@@ -83,6 +100,7 @@ console.log(a);
 
 // Find the most frequent item of an array
 function mostFreq() {
+  console.log("_________________________________________");
   console.log("Find the most frequent item of an array :");
   var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 var mf = 1;
@@ -107,6 +125,7 @@ console.log(item+" ( " +mf +" times ) ") ;
 
 // Swap the case of each character of a string, upper case to lower and vice versa
 function swapCase() {
+  console.log("_________________________________________");
   console.log("Swap the case of each character of a string, upper case to lower and vice versa :");
   var str = document.getElementById("str_swapCase").value;
 var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -134,6 +153,7 @@ document.getElementById("result_swapCase").innerHTML = "The result is :" + resul
 // Print the elements of an array
 function printArr() {
   // a sample 2-D array
+  console.log("_________________________________________");
   console.log("Print the elements of an array :");
 var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
 
@@ -212,12 +232,14 @@ function removeDuplicates(num) {
 
 var Mynum = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
 var result = removeDuplicates(Mynum);
+console.log("_________________________________________");
 console.log("Remove duplicate items from an array, ignore case sensitivity :");
 console.log(Mynum);
 console.log(result);
 
 // Display the colors entered in an array by a specific format
 var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+console.log("_________________________________________");
  console.log("Display the colors entered in an array by a specific format :");
 function Ordinal(n)
  {
@@ -236,6 +258,7 @@ console.log(output);
 
 // Display the colors entered in an array by a specific format
 var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+console.log("_________________________________________");
 console.log("Display the colors entered in an array by a specific format :");
 function Ordinal(n)
  {
@@ -255,6 +278,7 @@ console.log(output);
 // Randomly arrange or shuffle an array
 function shuffle(arra1) {
     var ctr = arra1.length, temp, index;
+    console.log("_________________________________________");
     console.log("Randomly arrange or shuffle an array :");
 // While there are elements in the array
     while (ctr > 0) {
@@ -295,6 +319,7 @@ function binary_Search(items, value){
  return (items[middleIndex] != value) ? -1 : middleIndex;
 }
 var items = [1, 2, 3, 4, 5, 7, 8, 9];
+console.log("_________________________________________");
 console.log("Perform a binary search within an array :");
 console.log(binary_Search(items, 1));
 console.log(binary_Search(items, 5));
@@ -332,6 +357,7 @@ function Arrays_sum(array1, array2)
   }
   return result;
 }
+console.log("_________________________________________");
 console.log("Compute the sum of each individual index value of two or more arrays :");
 console.log(Arrays_sum([1,0,2,3,4], [3,5,6,7,8,13]));
 
@@ -351,6 +377,7 @@ function find_duplicate_in_array(arra1) {
   return result;
   }
 var arr = [1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6];
+console.log("_________________________________________");
 console.log("Find duplicate values in a array :");
 console.log(find_duplicate_in_array(arr));
 
@@ -371,6 +398,7 @@ if (shallow) {
     }
     return r;
 }
+console.log("_________________________________________");
 console.log("Flatten a nested array :");
 console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
 console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
@@ -400,6 +428,7 @@ function union(arra1, arra2) {
 
   return res;
 }
+console.log("_________________________________________");
 console.log("Compute the union of two arrays :");
 console.log(union([1, 2, 3], [100, 2, 1, 10]));
 
@@ -417,6 +446,7 @@ if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
 }
 return temp.sort((a,b) => a-b);
 }
+console.log("_________________________________________");
 console.log("Find the difference of two arrays :");
 console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
 console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
@@ -438,6 +468,7 @@ function filter_array(test_array) {
 
     return result;
 }
+console.log("_________________________________________");
 console.log("Remove null, 0, blank, false, undefined and NaN values from an array :");
 console.log(filter_array([NaN, 0, 15, false, -22, '',undefined, 47, null]));
 
@@ -456,6 +487,7 @@ function compare_to_sort(x,y)
     return 1;
   return 0;
  }
+ console.log("_________________________________________");
 console.log("Sort the specified array of objects by title value :");
 console.log(library.sort(compare_to_sort));
 
@@ -480,6 +512,7 @@ function twoSum(nums, target_num) {
   }
   return indexnum;
   }
+  console.log("_________________________________________");
   console.log("Find a pair of elements from an specified array whose sum equals a specific target number :");
 console.log(twoSum([10,20,10,40,50,60,70],50));
 
@@ -506,6 +539,7 @@ function property_value(array, property_key) {
 
 	return arr;
 }
+console.log("_________________________________________");
 console.log("Retrieve the value of a specified property from all elements in an array :");
 console.log(property_value(library1, 'title'));
 console.log(property_value(library1, 'author'));
@@ -517,6 +551,7 @@ a1= arr[0], a2= arr[arr.length-1], L= a1.length, i= 0;
 while(i< L && a1.charAt(i)=== a2.charAt(i)) i++;
 return a1.substring(0, i);
 }
+console.log("_________________________________________");
 console.log("Find the longest common starting substring in a set of strings :");
 console.log(longest_common_starting_substring(['go', 'google']));
 
@@ -566,6 +601,7 @@ function num_string_range(start, end, step)
     return range;
 
 }
+console.log("_________________________________________");
 console.log("Fill an array with values on supplied bounds :");
 console.log(num_string_range('a', "z", 2));
 console.log(num_string_range("Z", "A", 2));
@@ -597,6 +633,7 @@ function merge_array(array1, array2) {
 var array_duplicates1 = [1, 2, 3];
 
 var array_duplicates2 = [2, 30, 1];
+console.log("_________________________________________");
 console.log("Merge two arrays and removes all duplicates elements :");
 console.log(merge_array(array_duplicates1, array_duplicates2));
 
@@ -620,6 +657,7 @@ function contains(arr, element) {
     return false;
 }
 arr = [2, 5, 9, 6];
+console.log("_________________________________________");
 console.log("Find to if an array contains a specific element :");
 console.log(contains(arr, 5));
 
@@ -666,6 +704,7 @@ function nthlargest(arra,highest){
 
 			return (arra[(highest - 1)]);
 		}
+console.log("_________________________________________");
 console.log("Get nth largest element from an unsorted array :");
 console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
 
@@ -678,6 +717,7 @@ return items[Math.floor(Math.random()*items.length)];
 }
 
 var items = [254, 45, 212, 365, 2543];
+console.log("_________________________________________");
 console.log("Get a random item from an array :");
 console.log(random_item(items));
 
@@ -695,6 +735,7 @@ function array_filled(n, val)
 {
     return Array.apply(null, Array(n)).map(String.prototype.valueOf,val);
 }
+console.log("_________________________________________");
 console.log("Create a specified number of elements and pre-filled string value array :");
 console.log(array_filled(3, 'default value'));
 console.log(array_filled(4, 'password'));
@@ -716,6 +757,7 @@ function move(arr, old_index, new_index) {
      arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
    return arr;
 }
+console.log("_________________________________________");
 console.log("Move an array element from one position to another :");
 console.log(move([10, 20, 30, 40, 50], 0, 2));
 console.log(move([10, 20, 30, 40, 50], -1, -2));
@@ -731,6 +773,7 @@ function isEligible(value) {
     return value;
   }
 }
+console.log("_________________________________________");
 console.log("Filter false, null, 0 and blank values from an array :");
 console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));
 
@@ -744,7 +787,7 @@ function array_range(start, len)
 		}
       		return arr;
 }
-
+console.log("_________________________________________");
 console.log("Generate an array of specified length, the content of the array is integer numbers, increase by one from starting :");
 console.log(array_range(1, 4));
 
@@ -772,6 +815,7 @@ function rangeBetwee(start, end)
       		return arro;
 		}
 	}
+console.log("_________________________________________");
 console.log("Generate an array between two integers of 1 step length :");
 console.log(rangeBetwee(4, 7));
 console.log(rangeBetwee(-4, 7));
@@ -808,6 +852,7 @@ if (shallow) {
     }
     return r;
 };
+console.log("_________________________________________");
 console.log("Find the unique elements from two arrays :");
 console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));

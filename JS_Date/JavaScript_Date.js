@@ -1,9 +1,20 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Date :");
+console.log("                      ");
 // Check whether an input is a date object or not
 var is_date = function(input) {
   if (Object.prototype.toString.call(input) === "[object Date]")
     return true;
     return false;
 };
+console.log("_________________________________________");
 console.log("Check whether an input is a date object or not :");
 console.log(is_date("October 13, 2014 11:13:00"));
 console.log(is_date(new Date(86400000)));

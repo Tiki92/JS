@@ -1,3 +1,13 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Validation: ");
+console.log("                      ");
 // Validate whether a given value type is Boolean or not
 function is_boolean(value)
         {

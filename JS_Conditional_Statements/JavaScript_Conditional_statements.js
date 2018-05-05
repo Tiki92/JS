@@ -56,6 +56,7 @@ else
 
 // JavaScript: Compute the average and grade of the students
 function avg_students() {
+  console.log("_________________________________________");
   console.log("JavaScript: Compute the average and grade of the students :");
   var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
 
@@ -86,6 +87,8 @@ alert("Average grade: " + (Avgmarks)/students.length);
 
 // JavaScript: Iterates the integers from 1 to 100
 function iterateTo100() {
+  console.log("_________________________________________");
+  console.log("JavaScript: Iterates the integers from 1 to 100 :");
   for ( var i = 1; i <= 100; i++ )
 {
   if ( i%3 === 0 && i%5 === 0 )
@@ -110,6 +113,7 @@ function iterateTo100() {
 // Find the armstrong numbers of 3 digits
 function three_digit_armstrong_number()
 {
+  console.log("_________________________________________");
   console.log("Find the armstrong numbers of 3 digits :");
  for (var i = 1; i < 10; ++i)
  {
@@ -131,6 +135,7 @@ function three_digit_armstrong_number()
 
   // Construct a pattern, using a nested for loop
   function createPattern() {
+    console.log("_________________________________________");
     console.log("Construct a pattern, using a nested for loop :");
     var x,y,chr;
   for(x=1; x <=6; x++)
@@ -146,6 +151,7 @@ function three_digit_armstrong_number()
 
   // Compute the greatest common divisor (GCD) of two positive integers
   function GCD() {
+    console.log("_________________________________________");
     console.log("Compute the greatest common divisor (GCD) of two positive integers :");
     var a = 2154; //First number
     var b = 458;  //Second number
@@ -167,6 +173,7 @@ function three_digit_armstrong_number()
 
     // Sum the multiples of 3 and 5 under 1000
     function sumMultiple() {
+      console.log("_________________________________________");
       console.log("Sum the multiples of 3 and 5 under 1000 :")
       var sum = 0;
 for(var i = 1; i < 101; i++){
