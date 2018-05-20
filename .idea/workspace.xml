@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97379a4e-77ea-4619-ac57-d1ee22810431" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Functions/JavaScript_Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Functions/JavaScript_Functions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Functions/JavaScript_Functions_console.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Functions/JavaScript_Functions_console.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Basic/Functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Basic/Functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Basic/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Basic/Functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Recursion/JavaScript_Recursion.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Recursion/JavaScript_Recursion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Recursion/JavaScript_Recursion_Console.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Recursion/JavaScript_Recursion_Console.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,35 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JavaScript_DOM.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaScript_DOM.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,6 +61,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,12 +78,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/react-chat-app" />
+    <property name="last_opened_file_path" value="/var/www/html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -150,14 +123,15 @@
       <workItem from="1524409845472" duration="48000" />
       <workItem from="1525367257184" duration="4917000" />
       <workItem from="1525511236015" duration="789000" />
+      <workItem from="1526065603866" duration="126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18693000" />
+    <option name="totallyTimeSpent" value="18819000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1081" extended-state="6" />
+    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17447917" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -187,6 +161,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -417,6 +412,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -426,15 +428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS_DOM/JavaScript_DOM.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>

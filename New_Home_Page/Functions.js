@@ -605,9 +605,8 @@ function test_number() {
 }
 
 // Check two given non-negative integers and if one of the number is multiple of 7 or 11
-function check_numbers() {
+function check_numbers1() {
   var x = +document.getElementById('num1_check_numbers').value;
-  console.log(x);
   if ((x % 7) === 0 || (x % 11) === 0 /*&& (x % 7) !== (x % 11)*/) {
     document.getElementById('result_check_numbers1').innerHTML = "One of the numbers is a multiple of 11 or 7.";
 

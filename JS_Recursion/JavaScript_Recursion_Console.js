@@ -1,3 +1,13 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
+console.log("JavaScript_Recursion: ");
+console.log("                      ");
 // JavaScript: Calculate the factorial of a number
 function factorial(x) {
 
@@ -7,6 +17,7 @@ function factorial(x) {
     return x * factorial(x - 1);
   }
 }
+console.log("_________________________________________");
 console.log("JavaScript: Calculate the factorial of a number :")
 console.log(factorial(5));
 
@@ -20,6 +31,7 @@ var range = function(start_num, end_num) {
     return list;
   }
 }
+console.log("_________________________________________");
 console.log("JavaScript: Get the integers in a range :");
 console.log(range(2, 9));
 
@@ -27,6 +39,7 @@ console.log(range(2, 9));
 function ex4(arr){
 return arr.reduce((a, b) => a + b);
 }
+console.log("_________________________________________");
 console.log("JavaScript: Compute the sum of an array of integers :");
 console.log(ex4([1, 2, 3, 4, 5, 6]));
 
@@ -39,6 +52,7 @@ var exponent = function(a, n) {
     return a * exponent(a, n - 1);
   }
 };
+console.log("_________________________________________");
 console.log("JavaScript: Compute the exponent of a number :");
 console.log(exponent(4, 3));
 
@@ -53,6 +67,7 @@ var fibonacci_series = function(n) {
     return s;
   }
 };
+console.log("_________________________________________");
 console.log("JavaScript: Get the first n Fibonacci numbers :");
 console.log(fibonacci_series(8));
 
@@ -77,6 +92,7 @@ function is_even_recursion(number)
     return is_even_recursion(number);
   }
 }
+console.log("_________________________________________");
 console.log("JavaScript: Check whether a number is even or not :");
 console.log(is_even_recursion(234)); //true
 console.log(is_even_recursion(-45)); // false
@@ -101,6 +117,7 @@ Array.prototype.br_search = function (target)
 };
 
 l= [0,1,2,3,4,5,6];
+console.log("_________________________________________");
 console.log("JavaScript: Binary search using recursion :");
 console.log(l.br_search(5));
 
@@ -128,5 +145,6 @@ Array.prototype.merge_Sort = function () {
 };
 
 var a = [34,7,23,32,5,62];
+console.log("_________________________________________");
 console.log("JavaScript: Marge sort - recursion :");
 console.log(a.merge_Sort());

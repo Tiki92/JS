@@ -240,25 +240,6 @@ console.log(result);
 // Display the colors entered in an array by a specific format
 var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 console.log("_________________________________________");
- console.log("Display the colors entered in an array by a specific format :");
-function Ordinal(n)
- {
- var o = ["th","st","nd","rd"],
- x = n%100;
- return x+(o[(x-20)%10]||o[x]||o[0]);
- }
-
-for(n = 0; n < color.length; n++){
- var ordinal = n + 1;
-
- var output = (Ordinal(ordinal) + " choice is " + color[n] + ".");
-
-console.log(output);
-}
-
-// Display the colors entered in an array by a specific format
-var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
-console.log("_________________________________________");
 console.log("Display the colors entered in an array by a specific format :");
 function Ordinal(n)
  {
@@ -554,9 +535,7 @@ return a1.substring(0, i);
 console.log("_________________________________________");
 console.log("Find the longest common starting substring in a set of strings :");
 console.log(longest_common_starting_substring(['go', 'google']));
-
 console.log(longest_common_starting_substring(['SQLInjection', 'SQLTutorial']));
-
 console.log(longest_common_starting_substring(['abcd', '1234']));
 
 // Fill an array with values on supplied bounds

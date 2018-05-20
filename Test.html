@@ -1,158 +1,48 @@
-<body onload="draw()">
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script src="//raw.github.com/botmonster/jquery-bootpag/master/lib/jquery.bootpag.min.js"></script> -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="content">Dynamic Content goes here</div>
+    <div id="page-selection">Pagination goes here</div>
 
-  <canvas id="canvas" width="150" height="150"></canvas>
-  <!-- <div class="function1">
-    <form class="form1" action="index.html" method="post">
-      Enter Number1 : <input type="number" id="num1_global"><br>
-      Enter Number2 : <input type="number" id="num2_global"><br>
-      Enter Number3 : <input type="number" id="num3_global"><br>
-      Enter Number4 : <input type="number" id="num4_global">
-    </form>
-    <button type="button" name="button" onclick="first_last_1()">Get Result</button>
-    <p id="result_first_last_1"></p>
-  </div> -->
+    <script src="https://code.jquery.com/jquery-1.8.0.min.js">
+    $('.demo').bootpag({
+        total: 5
+    }).on("page", function(event, num){
+        $(".content").html("Page " + num); // or some ajax content loading...
 
+        // ... after content load -> change total to 10
+        $(this).bootpag({total: 10, maxVisible: 10});
 
+    });
 
-<!--
-<div class="function1">
-    <form class="form1" action="index.html" method="post">
-      Number1 : <input type="number" id="num1_check_numbers"><br>
-    </form>
-    <button type="button" name="button" onclick="check_numbers()">Get Result</button>
-    <p id="result_check_numbers"></p>
-  </div> ->>
+    </script>
+    <script type="text/javascript">
+    /*
 
-<! Find if 1st January is Sunday -->
-<!--<p id="January">Find when 1st January is on Sunday:</p>
-<div id="1_January">
-</div>
+bootpag - jQuery plugin for dynamic pagination
 
-<div id="result"></div> -->
+Copyright (c) 2015 botmonster@7items.com
+
+Licensed under the MIT license:
+ http://www.opensource.org/licenses/mit-license.php
+
+Project home:
+ http://botmonster.com/jquery-bootpag/
+
+Version:  1.0.7
+
+*/
+(function(h,q){h.fn.bootpag=function(p){function m(c,b){b=parseInt(b,10);var d,e=0==a.maxVisible?1:a.maxVisible,k=1==a.maxVisible?0:1,n=Math.floor((b-1)/e)*e,f=c.find("li");a.page=b=0>b?0:b>a.total?a.total:b;f.removeClass(a.activeClass);d=1>b-1?1:a.leaps&&b-1>=a.maxVisible?Math.floor((b-1)/e)*e:b-1;a.firstLastUse&&f.first().toggleClass(a.disabledClass,1===b);e=f.first();a.firstLastUse&&(e=e.next());e.toggleClass(a.disabledClass,1===b).attr("data-lp",d).find("a").attr("href",g(d));k=1==a.maxVisible?
+0:1;d=b+1>a.total?a.total:a.leaps&&b+1<a.total-a.maxVisible?n+a.maxVisible+k:b+1;e=f.last();a.firstLastUse&&(e=e.prev());e.toggleClass(a.disabledClass,b===a.total).attr("data-lp",d).find("a").attr("href",g(d));f.last().toggleClass(a.disabledClass,b===a.total);e=f.filter("[data-lp="+b+"]");k="."+[a.nextClass,a.prevClass,a.firstClass,a.lastClass].join(",.");if(!e.not(k).length){var m=b<=n?-a.maxVisible:0;f.not(k).each(function(b){d=b+1+n+m;h(this).attr("data-lp",d).toggle(d<=a.total).find("a").html(d).attr("href",
+g(d))});e=f.filter("[data-lp="+b+"]")}e.not(k).addClass(a.activeClass);l.data("settings",a)}function g(c){return a.href.replace(a.hrefVariable,c)}var l=this,a=h.extend({total:0,page:1,maxVisible:null,leaps:!0,href:"javascript:void(0);",hrefVariable:"{{number}}",next:"&raquo;",prev:"&laquo;",firstLastUse:!1,first:'<span aria-hidden="true">&larr;</span>',last:'<span aria-hidden="true">&rarr;</span>',wrapClass:"pagination",activeClass:"active",disabledClass:"disabled",nextClass:"next",prevClass:"prev",
+lastClass:"last",firstClass:"first"},l.data("settings")||{},p||{});if(0>=a.total)return this;h.isNumeric(a.maxVisible)||a.maxVisible||(a.maxVisible=parseInt(a.total,10));l.data("settings",a);return this.each(function(){var c,b,d=h(this);c=['<ul class="',a.wrapClass,' bootpag">'];a.firstLastUse&&(c=c.concat(['<li data-lp="1" class="',a.firstClass,'"><a href="',g(1),'">',a.first,"</a></li>"]));a.prev&&(c=c.concat(['<li data-lp="1" class="',a.prevClass,'"><a href="',g(1),'">',a.prev,"</a></li>"]));for(b=
+1;b<=Math.min(a.total,a.maxVisible);b++)c=c.concat(['<li data-lp="',b,'"><a href="',g(b),'">',b,"</a></li>"]);a.next&&(b=a.leaps&&a.total>a.maxVisible?Math.min(a.maxVisible+1,a.total):2,c=c.concat(['<li data-lp="',b,'" class="',a.nextClass,'"><a href="',g(b),'">',a.next,"</a></li>"]));a.firstLastUse&&(c=c.concat(['<li data-lp="',a.total,'" class="last"><a href="',g(a.total),'">',a.last,"</a></li>"]));c.push("</ul>");d.find("ul.bootpag").remove();d.append(c.join(""));c=d.find("ul.bootpag");d.find("li").click(function(){var b=
+h(this);if(!b.hasClass(a.disabledClass)&&!b.hasClass(a.activeClass)){var c=parseInt(b.attr("data-lp"),10);l.find("ul.bootpag").each(function(){m(h(this),c)});l.trigger("page",c)}});m(c,a.page)})}})(jQuery,window);
+    </script>
 </body>
-
-<script>
-/* function digit_delete(num) {
-    var result = 0,
-        num_digits = [];
-    while (num) {
-        num_digits.push(num % 10);
-        num = Math.floor(num / 10);
-        //console.log(num);
-    }
-    for (var index_num = 0; index_num < num_digits.length; index_num++) {
-        var n = 0;
-
-        for (var i = num_digits.length - 1; i >= 0; i--) {
-            if (i !== index_num) {
-                n = n * 10 + num_digits[i];
-                console.log("n =");
-                console.log(n);
-                console.log("index_num =");
-                console.log(index_num);
-                console.log("i =");
-                console.log(i);
-            }
-        }
-        result = Math.max(n, result);
-    }
-    return result;
-}
-console.log("the function");
-console.log(digit_delete(100)); */
-
-function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var context = canvas.getContext('2d');
-
-    context.fillRect(20,20,100,100);
-    context.clearRect(40,40,60,60);
-    context.strokeRect(45,45,50,50);
-  }
-}
-
-/*
-var num1 = +document.getElementById('num1_global').value;
-var num2 = +document.getElementById('num2_global').value;
-var num3 = +document.getElementById('num3_global').value;
-var num4 = +document.getElementById('num4_global').value;
-
-
-function first_last_1() {
-var nums = [num1, num2, num3, num4];
-  document.getElementById('result_first_last_1').innerHTML = "The result is : " + [nums[1], nums[2], nums[0]];
-} */
-
-
-
-/*
-function check_numbers() {
-  var x = +document.getElementById('num1_check_numbers').value;
-  console.log(x);
-  if ((x % 7) === 0 || (x % 11) === 0 && (x % 7) === (x % 11)) {
-    document.getElementById('result_check_numbers').innerHTML = "One of the numbers is a multiple of 11 or 7.";
-
-  } else {
-    document.getElementById('result_check_numbers').innerHTML = "The numbers are not multiple of 11 or 7.";
-  }
-  */
-    // Find if January is Sunday
-    /*function writeJanuary() {
-        for (var year1 = 2014; year1 <= 2050; year1++) {
-            var d = new Date(year1, 0, 1);
-            if (d.getDay() === 0) {
-                //document.getElementById('1_January').innerHTML = ("1st January is being a Sunday "+ year);
-                //document.write ("1st January is being a Sunday "+ year + "</br>");
-                //console.log("1st January is being a Sunday "+ year);
-                //let January = document.createElement('li');
-                //January.innerHTML = ("1st January is being a Sunday" + year1);
-                //January.appendChild(newLi);
-                //document.querySelectors('1_January').innerHTML = ("1st January is being a Sunday" + year1")
-                print_Jan('In the year ' + year1 + ' 1st is on Sunday');
-            }
-        }
-
-
-        function print_Jan(s) {
-            var r = document.getElementById('1_January');
-            r.innerHTML += s + '<br>';
-        }
-    }
-        writeJanuary();
-
-  /*  function fizzBuzz(){
-        for(var i=1;i<=100;i++){
-            if(i%5 === 0 && i%3 === 0){
-                print('FizzBuzz');
-            } else if(i%3 === 0){
-                print('Fizz');
-            } else if(i%5 === 0){
-                print('Buzz');
-            } else {
-                print(i);
-            }
-        }
-    }
-
-    var r = document.getElementById('result');
-
-    function print(s){
-        r.innerHTML += s + '<br>';
-    }
-
-    fizzBuzz();*/
-
-
-
-    /* Check two given integers, one is positive and one is negative
-    function positive_negative() {
-      var num1 = +document.getElementById('pos_neg_num1').value;
-      var num2 = +document.getElementById('pos_neg_num2').value;
-      if (pos_neg_num1 < 0 && pos_neg_num2 > 0) || (pos_neg_num1 > 0 && pos_neg_num2 < 0)) {
-      document.getElementById('pos_neg_result').innerHTML = 'The Function returned True';
-    } else {
-      document.getElementById('pos_neg_result').innerHTML = 'The Function returned False';
-    }
-  } */
-</script>
+</html>

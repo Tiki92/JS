@@ -8,6 +8,7 @@ window.console = {
 }
 console.log("JavaScript_Date :");
 console.log("                      ");
+
 // Check whether an input is a date object or not
 var is_date = function(input) {
   if (Object.prototype.toString.call(input) === "[object Date]")
@@ -471,17 +472,17 @@ dt = new Date(1989, 10, 1);
 console.log(minutes_with_leading_zeros(dt));
 
 // Get seconds with leading zeros
-function seconds_with_leading_zeros(dt)
+function seconds_with_leading_zeros1(dt1)
 {
-  return (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
+  return (dt1.getMinutes() < 10 ? '0' : '') + dt1.getMinutes();
 }
 console.log("_________________________________________");
 console.log("Get seconds with leading zeros :");
-dt = new Date();
-console.log(seconds_with_leading_zeros(dt));
+dt1 = new Date();
+console.log(seconds_with_leading_zeros1(dt1));
 
-dt = new Date(1989, 10, 1);
-console.log(seconds_with_leading_zeros(dt));
+dt1 = new Date(1989, 10, 1);
+console.log(seconds_with_leading_zeros1(dt1));
 
 // Get Timezone
 function seconds_with_leading_zeros(dt)

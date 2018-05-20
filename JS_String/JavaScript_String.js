@@ -51,17 +51,6 @@ console.log("_________________________________________");
 console.log("Remove a specific number of characters from a string :");
 console.log(truncate_string("Robin Singh",4));
 
-// Remove a specific number of characters from a string
-truncate_string = function (str1, length) {
-
-    if ((str1.constructor === String) && (length>0)) {
-        return str1.slice(0, length);
-    }
-};
-console.log("_________________________________________");
-console.log("Remove a specific number of characters from a string :");
-console.log(truncate_string("Robin Singh",4));
-
 // Convert a string in abbreviated form
 function abbrev_name() {
   var str1 = document.getElementById("sentence_abbrev_name").value;
