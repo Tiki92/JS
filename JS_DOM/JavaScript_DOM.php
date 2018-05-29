@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>JavaScript DOM</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/Style/Basic_style.css">
@@ -10,12 +10,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+
+</head>
+<body onload="animate_string('target')">
+
   <!-- Animate String -->
   <div >
   <p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
   </div>
-</head>
-<body onload="animate_string('target')">
 
 <div class="container-full-bg">
 <div class="container-fluid" id = "Header">
@@ -70,10 +72,10 @@
         <p>_________________________________________</p>
         <div class="function1">
           <p>Store and display the values of text boxes of a form :</p>
-          <form id="form1" onsubmit="getFormvalue()">
-            First name: <input type="text" name="fname" value="David" title="Text1"><br>
-            Last name: <input type="text" name="lname" value="Beckham" title="Text"><br>
-            <input type="button" class="btn btn-primary" class="btn btn-primary" onclick="getFormvalue()" value="Submit">
+          <form id="form2" onsubmit="getFormvalue()">
+            First name: <input type="text" name="fname" value="David"><br>
+            Last name: <input type="text" name="lname" value="Beckham"><br>
+            <input type="submit" class="btn btn-primary"  value="Submit">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#getFormvalue_show">
           Show Code
         </button>
@@ -217,7 +219,7 @@
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#getBold_items_show">
         Show Code
       </button>
-      
+
         <!-- Get the width and height of a window online -->
         <p>_________________________________________</p>
         <div class="function1">

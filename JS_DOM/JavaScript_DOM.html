@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>JavaScript DOM</title>
 </head>
-<body onload="animate_string('target')" onresize="getSize()" >
+<body onload="animate_string('target')" >
 
 <!-- Animate String -->
 <div >
@@ -27,10 +27,10 @@
   <p>_________________________________________</p>
   <div class="function1">
     <p>Store and display the values of text boxes of a form :</p>
-    <form id="form1" onsubmit="getFormvalue()">
-      First name: <input type="text" name="fname" value="David" title="Text1"><br>
-      Last name: <input type="text" name="lname" value="Beckham" title="Text"><br>
-      <input type="button" onclick="getFormvalue()" value="Submit">
+    <form id="form2" onsubmit="getFormvalue()">
+      First name: <input type="text" name="fname" value="David"><br>
+      Last name: <input type="text" name="lname" value="Beckham"><br>
+      <input type="submit" value="Submit">
     </form>
       <p id="result_getFormvalue"></p>
   </div>

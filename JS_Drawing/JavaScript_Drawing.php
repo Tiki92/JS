@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>JavaScript Drawing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/Style/Basic_style.css">
@@ -15,7 +15,7 @@
   <p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
   </div>
 </head>
-<body onload="animate_string('target')">
+<body onload="animate_string('target'), draw(), draw1(), draw2(), draw3(), draw4(), draw5()">
 
 <div class="container-full-bg">
 <div class="container-fluid" id = "Header">
@@ -55,7 +55,6 @@
 
       <div class="main">
         <!-- Draw a rectangular shape -->
-        <p>_________________________________________</p>
         <div class="function1" >
           <body onload="draw();">
             <p>Draw a rectangular shape :</p>

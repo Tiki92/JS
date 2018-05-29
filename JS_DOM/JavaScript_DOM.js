@@ -1,3 +1,11 @@
+// Show console.log in the HTML file
+window.console = {
+  log: function(str){
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("myLog").appendChild(node);
+  }
+}
 // Modify paragraph text style through javascript code using button
 function js_style()
 {
@@ -10,12 +18,13 @@ function js_style()
 // Store and display the values of text boxes of a form
 function getFormvalue()
 {
-  var x=document.getElementById("form1");
+  var x=document.getElementById("form2");
   for (var i=0;i<x.length;i++)
   {
    if (x.elements[i].value!=='Submit')
     {
-      document.getElementById("result_getFormvalue").innerHTML = (x.elements[i].value);
+        console.log(x.elements[i].value);
+      //document.getElementById("result_getFormvalue").innerHTML =(x.elements[i].value);
      }
    }
 }
