@@ -1,0 +1,19 @@
+#Header {
+/*  background-image: url();
+  background-size: cover; */
+  height:60vh;
+  width: 100%
+}
+.container {
+  margin-top: 20px;
+}
+ .logs {
+/*  border: solid red 5px; */
+  overflow: scroll;
+  height: 1200px;
+}
+.main {
+  /* border: solid blue 5px; */
+  overflow: scroll;
+  height: 1200px;
+}

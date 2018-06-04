@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Array</title>
+  </head>
+  <body onload="animate_string('target')">
+    <!-- Animate String -->
+    <div >
+    <p id="target">Working hard on this JavaScript Project. Work in Progress...... </p>
+    </div>
+
+    <h2>JavaScript Array : 42 Exercises</h2>
+<!-- Insert dashes (-) between each two even digits of a specific number -->
+<p>_________________________________________</p>
+<div class="function1">
+  <p>Insert dashes (-) between each two even digits of a specific number</p>
+  <p>The result can be seen in the console :</p>
+  <button type="button" name="button" onclick="separateNums()">Get Result</button>
+</div>
+
+  <!-- Sort the items of an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Sort the items of an array :</p>
+    <p>(The result can be found in the Console)</p>
+    <button type="button" name="button" onclick="sort([ 3, 8, 7, 6, 5, -4, -3, 2, 1 ])">Get Result</button>
+  </div>
+
+  <!-- Find the most frequent item of an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find the most frequent item of an array :</p>
+    <p>(The result can be found in the Console)</p>
+    <button type="button" name="button" onclick="mostFreq()">Get Result</button>
+
+  </div>
+
+  <!-- Swap the case of each character of a string, upper case to lower and vice versa -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Swap the case of each character of a string, upper case to lower and vice versa :</p>
+    <form class="form1" action="index.html" method="post">
+      Enter a Sentance : <input type="text" id="str_swapCase" size="80">
+    </form>
+    <button type="button" name="button" onclick="swapCase()">Get Result</button>
+    <p id="result_swapCase"></p>
+  </div>
+
+  <!-- Print the elements of an array-->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Print the elements of an array :</p>
+    <p>(The result can be found in the Console)</p>
+    <button type="button" name="button" onclick="printArr()">Get Result</button>
+  </div>
+
+  <!-- Find the sum of squares of a numeric vector -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find the sum of squares of a numeric vector :</p>
+    <button type="button" name="button" onclick="sum_sq([0, 1, 2, 3, 4])">Get Result</button>
+    <p id="result_sum_sq"></p>
+  </div>
+
+  <!-- Compute the sum and product of an array of integers -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Compute the sum and product of an array of integers :</p>
+    <button type="button" name="button" onclick="sum_product()">Get Result</button>
+    <p id="result_sum_product"></p>
+  </div>
+
+  <!-- Add items in a blank array and display the items -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Add items in a blank array and display the items :</p>
+    <input type="text" id="text_addItems">
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+    <div id="Result_addItems"></div>
+  </div>
+
+  <!-- Remove duplicate items from an array, ignore case sensitivity -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Remove duplicate items from an array, ignore case sensitivity :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Display the colors entered in an array by a specific format -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Display the colors entered in an array by a specific format :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Display the colors entered in an array by a specific format -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Display the colors entered in an array by a specific format :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Randomly arrange or shuffle an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Randomly arrange or shuffle an array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Perform a binary search within an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Perform a binary search within an array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!--  Compute the sum of each individual index value of two or more arrays -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p> Compute the sum of each individual index value of two or more arrays :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Find duplicate values in a array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find duplicate values in a array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Flatten a nested array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Flatten a nested array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Compute the union of two arrays -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Compute the union of two arrays :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Find the difference of two arrays -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find the difference of two arrays :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Remove null, 0, blank, false, undefined and NaN values from an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Remove null, 0, blank, false, undefined and NaN values from an array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Sort the specified array of objects by title value -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Sort the specified array of objects by title value :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Find a pair of elements from an specified array whose sum equals a specific target number -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find a pair of elements from an specified array whose sum equals a specific target number :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Retrieve the value of a specified property from all elements in an array -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Retrieve the value of a specified property from all elements in an array :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Find the longest common starting substring in a set of strings -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Find the longest common starting substring in a set of strings :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Fill an array with values on supplied bounds -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Fill an array with values on supplied bounds :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+  <!-- Merge two arrays and removes all duplicates elements -->
+  <p>_________________________________________</p>
+  <div class="function1">
+    <p>Merge two arrays and removes all duplicates elements :</p>
+    <p>(The result can be found in the Console)</p>
+  </div>
+
+    <!-- Remove a specific element from an array -->
+  <p>_________________________________________</p>
+    <div class="function1">
+      <p>Remove a specific element from an array :</p>
+      <button type="button" name="button" onclick="remove_array_element([2, 5, 9, 6], 5)">Get Result</button>
+      <p id="result_remove_array_element"></p>
+    </div>
+
+    <!-- Find to if an array contains a specific element -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Find to if an array contains a specific element :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Empty an array keeping the original -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Empty an array keeping the original :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get nth largest element from an unsorted array -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get nth largest element from an unsorted array :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Get a random item from an array -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Get a random item from an array :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Create a specified number of elements and pre-filled numeric value array -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Create a specified number of elements and pre-filled numeric value array :</p>
+      <form class="form1" action="index.html" method="post">
+        Enter Number 1: <input type="number" id="number_array_filled"><br>
+        Enter Number 2: <input type="number" id="number2_array_filled">
+      </form>
+      <button type="button" name="button" onclick="array_filled()">Get Result</button>
+      <p id="result_array_filled"></p>
+    </div>
+
+    <!-- Create a specified number of elements and pre-filled string value array -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Create a specified number of elements and pre-filled string value array :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Move an array element from one position to another -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Move an array element from one position to another :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Filter false, null, 0 and blank values from an array -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Filter false, null, 0 and blank values from an array :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Generate an array of specified length, the content of the array is integer numbers, increase by one from starting -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Generate an array of specified length, the content of the array is integer numbers, increase by one from starting :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!-- Generate an array between two integers of 1 step length -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p>Generate an array between two integers of 1 step length :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <!--  Find the unique elements from two arrays -->
+    <p>_________________________________________</p>
+    <div class="function1">
+      <p> Find the unique elements from two arrays :</p>
+      <p>(The result can be found in the Console)</p>
+    </div>
+
+    <div class="log">
+      <ul id="myLog">
+      <p id=""></p>
+      </ul>
+    </div>
+    <script src="\JS_Functions/JavaScript_Functions.js"></script>
+    <script src="JavaScript_Array_console.js"></script>
+  </body>
+</html>

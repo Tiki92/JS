@@ -1,0 +1,36 @@
+
+  <!-- _________________________________________ -->
+<!-- The Modal -->
+<div class="modal fade" id="getSize_show">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Get the width and height of a window online</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <code><pre>
+          // Get the width and height of a window online
+          function getSize()
+          {
+          var w = document.documentElement.clientWidth;
+          var h = document.documentElement.clientHeight;
+
+          // put the result into a h1 tag
+           document.getElementById('wh').innerHTML = "<h1>Width: " + w + " â€¢ Height: " + h + "</h1>";
+          }
+        </pre></code>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
